@@ -2,7 +2,7 @@
    RUSTOMJEE CLIFF TOWER — LUXURY CSS v2
    =================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
   --navy:        #0a1628;
@@ -30,13 +30,13 @@
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; overflow-x:hidden; }
-body { font-family:'Jost', sans-serif; background:var(--navy); color:var(--white); overflow-x:hidden; font-weight:300; letter-spacing:0.02em; }
+body { font-family:'Open Sans', sans-serif; background:var(--navy); color:var(--white); overflow-x:hidden; font-weight:300; letter-spacing:0.02em; }
 
-h1,h2,h3,h4,h5,h6 { font-family:'Cormorant Garamond',serif; font-weight:400; }
+h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:400; }
 
 .section-label { font-family:'Jost',sans-serif; font-weight:300; font-size:0.6rem; letter-spacing:0.5em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:0.9rem; text-align:center; }
 .section-label.dark { color:var(--gold-dark); }
-.section-title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(2.2rem,5vw,3.8rem); line-height:1.08; letter-spacing:0.04em; text-align:center; }
+.section-title { font-family:'Playfair Display',serif; font-weight:300; font-size:clamp(2.2rem,5vw,3.8rem); line-height:1.08; letter-spacing:0.04em; text-align:center; }
 .section-title.dark { color:var(--dark-text); }
 .section-divider { width:50px; height:1px; background:var(--gold); margin:1.4rem auto; }
 .section-divider.center { margin:1.4rem auto; }
@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Cormorant Garamond',serif; font-weight:400; }
 /* NAVBAR */
 #mainNav { background:transparent; padding:1.5rem 0; transition:var(--transition); z-index:9999; }
 #mainNav.scrolled { background:rgba(10,22,40,0.97); backdrop-filter:blur(20px); padding:0.8rem 0; box-shadow:0 2px 40px rgba(0,0,0,0.4); }
-.navbar-brand-text { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:1.2rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--white) !important; line-height:1.1; }
+.navbar-brand-text { font-family:'Playfair Display',serif; font-weight:500; font-size:1.2rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--white) !important; line-height:1.1; }
 .navbar-brand-sub { font-family:'Jost',sans-serif; font-size:0.52rem; letter-spacing:0.35em; color:var(--gold); display:block; text-transform:uppercase; }
 .nav-link { font-family:'Jost',sans-serif; font-weight:300; font-size:0.68rem; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.85) !important; padding:0.5rem 1rem !important; transition:color 0.3s; }
 .nav-link:hover { color:var(--gold) !important; }
@@ -84,15 +84,15 @@ h1,h2,h3,h4,h5,h6 { font-family:'Cormorant Garamond',serif; font-weight:400; }
 .hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(10,22,40,0.4) 0%,rgba(10,22,40,0.1) 40%,rgba(10,22,40,0.3) 70%,rgba(10,22,40,0.88) 100%); }
 .hero-content { position:relative; z-index:2; text-align:center; padding:0 1rem; }
 .hero-eyebrow { font-size:0.63rem; letter-spacing:0.5em; color:var(--gold); text-transform:uppercase; margin-bottom:1.5rem; opacity:0; animation:fadeInUp 1s 0.3s forwards; }
-.hero-title { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(3.5rem,9vw,7rem); line-height:0.92; letter-spacing:0.12em; color:var(--white); text-transform:uppercase; opacity:0; animation:fadeInUp 1.2s 0.5s forwards; }
-.hero-subtitle { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; font-size:clamp(1rem,2.5vw,1.5rem); letter-spacing:0.2em; color:var(--ice-light); margin:1rem 0 0.5rem; opacity:0; animation:fadeInUp 1s 0.8s forwards; }
+.hero-title { font-family:'Playfair Display',serif; font-weight:300; font-size:clamp(3.5rem,9vw,7rem); line-height:0.92; letter-spacing:0.12em; color:var(--white); text-transform:uppercase; opacity:0; animation:fadeInUp 1.2s 0.5s forwards; }
+.hero-subtitle { font-family:'Playfair Display',serif; font-style:italic; font-weight:300; font-size:clamp(1rem,2.5vw,1.5rem); letter-spacing:0.2em; color:var(--ice-light); margin:1rem 0 0.5rem; opacity:0; animation:fadeInUp 1s 0.8s forwards; }
 .hero-divider { width:60px; height:1px; background:var(--gold); margin:1.5rem auto; opacity:0; animation:fadeInUp 1s 0.9s forwards; }
 .hero-rera { font-size:0.6rem; letter-spacing:0.3em; color:var(--silver-dark); text-transform:uppercase; margin-bottom:2.5rem; opacity:0; animation:fadeInUp 1s 1s forwards; }
 .hero-ctas { opacity:0; animation:fadeInUp 1s 1.2s forwards; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
 .hero-stats { position:absolute; bottom:3.5rem; left:0; right:0; z-index:3; display:flex; justify-content:center; opacity:0; animation:fadeIn 1s 1.8s forwards; }
 .hero-stat-item { padding:1rem 2.5rem; border-right:1px solid rgba(184,212,232,0.15); text-align:center; backdrop-filter:blur(10px); background:rgba(10,22,40,0.35); }
 .hero-stat-item:last-child { border-right:none; }
-.hero-stat-num { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:400; color:var(--gold-light); display:block; }
+.hero-stat-num { font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:400; color:var(--gold-light); display:block; }
 .hero-stat-label { font-size:0.53rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--silver-dark); display:block; margin-top:0.1rem; }
 .carousel-control-prev,.carousel-control-next { width:60px; opacity:0.6; transition:opacity 0.3s; }
 .carousel-control-prev:hover,.carousel-control-next:hover { opacity:1; }
@@ -144,7 +144,7 @@ section .container { padding:3rem 0 !important; }
 .overview-card:hover::after { width:100%; }
 .overview-icon-wrap { width:42px; height:42px; background:var(--ice-bg); display:flex; align-items:center; justify-content:center; margin-bottom:1.2rem; font-size:1.2rem; }
 .overview-lbl { font-size:0.57rem; letter-spacing:0.4em; text-transform:uppercase; color:var(--silver-dark); margin-bottom:0.4rem; display:block; }
-.overview-val { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:500; color:var(--dark-text); line-height:1.3; }
+.overview-val { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:500; color:var(--dark-text); line-height:1.3; }
 .overview-sub { font-size:0.7rem; color:var(--muted-text); margin-top:0.25rem; }
 
 /* OVERVIEW SLIDER */
@@ -190,9 +190,9 @@ section .container { padding:3rem 0 !important; }
 .pricing-card:hover::before { width:100%; }
 .pricing-card.featured { background:linear-gradient(135deg,var(--navy-light),var(--navy-mid)); border-color:rgba(201,169,110,0.2); }
 .pricing-badge { font-size:0.58rem; letter-spacing:0.35em; text-transform:uppercase; background:var(--gold); color:var(--navy); padding:0.28rem 0.9rem; display:inline-block; margin-bottom:1.5rem; }
-.pricing-type { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:400; color:var(--white); margin-bottom:0.3rem; }
+.pricing-type { font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:400; color:var(--white); margin-bottom:0.3rem; }
 .pricing-carpet { font-size:0.68rem; letter-spacing:0.2em; color:var(--silver-dark); text-transform:uppercase; margin-bottom:1.8rem; }
-.pricing-price { font-family:'Cormorant Garamond',serif; font-size:3.2rem; font-weight:300; color:var(--gold-light); line-height:1; }
+.pricing-price { font-family:'Playfair Display',serif; font-size:3.2rem; font-weight:300; color:var(--gold-light); line-height:1; }
 .pricing-price-label { font-size:0.62rem; letter-spacing:0.22em; color:var(--silver-dark); margin-top:0.35rem; text-transform:uppercase; }
 .pricing-features { list-style:none; margin:2rem 0; padding:0; }
 .pricing-features li { padding:0.65rem 0; border-bottom:1px solid rgba(184,212,232,0.07); font-size:0.78rem; color:rgba(255,255,255,0.8); display:flex; align-items:center; gap:0.8rem; }
@@ -201,7 +201,7 @@ section .container { padding:3rem 0 !important; }
 .btn-pricing:hover { background:var(--gold); color:var(--navy); }
 .payment-band { text-align:center; margin-top:3rem; padding:2rem; border:1px solid rgba(201,169,110,0.15); background:rgba(201,169,110,0.03); display:flex; gap:3rem; justify-content:center; flex-wrap:wrap; }
 .payment-band-item .lbl { font-size:0.58rem; letter-spacing:0.4em; color:var(--gold); text-transform:uppercase; }
-.payment-band-item .val { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--white); margin-top:0.2rem; }
+.payment-band-item .val { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--white); margin-top:0.2rem; }
 
 /* FLOOR PLANS — ICE LIGHT */
 #floorplans { background:var(--ice-light); padding:var(--section-vertical-padding) 0; }
@@ -212,7 +212,7 @@ section .container { padding:3rem 0 !important; }
 .fp-zoom { position:absolute; top:1rem; right:1rem; width:34px; height:34px; background:rgba(201,169,110,0.12); border:1px solid rgba(201,169,110,0.4); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.3s; font-size:0.8rem; color:var(--gold-dark); }
 .fp-preview:hover .fp-zoom { opacity:1; }
 .fp-body { padding:1.8rem; }
-.fp-name { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--dark-text); margin-bottom:0.25rem; }
+.fp-name { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--dark-text); margin-bottom:0.25rem; }
 .fp-floors { font-size:0.62rem; letter-spacing:0.3em; color:var(--gold-dark); text-transform:uppercase; margin-bottom:1rem; }
 .fp-spec-row { display:flex; gap:1.5rem; flex-wrap:wrap; margin-bottom:1rem; }
 .fp-spec { font-size:0.72rem; color:var(--muted-text); }
@@ -231,17 +231,17 @@ section .container { padding:3rem 0 !important; }
 .unit-plan-visual { background:linear-gradient(135deg,var(--ice-pale),var(--ice-light)); min-height:520px; display:flex; align-items:center; justify-content:center; position:relative; padding:2rem; }
 .unit-plan-visual::after { content:''; position:absolute; inset:16px; border:1px solid rgba(164,200,224,0.3); pointer-events:none; }
 .unit-info { padding:3.5rem 3rem; }
-.unit-badge { font-family:'Cormorant Garamond',serif; font-size:4.5rem; font-weight:300; color:var(--dark-text); line-height:1; margin-bottom:0.1rem; }
+.unit-badge { font-family:'Playfair Display',serif; font-size:4.5rem; font-weight:300; color:var(--dark-text); line-height:1; margin-bottom:0.1rem; }
 .unit-badge-label { font-size:0.6rem; letter-spacing:0.4em; text-transform:uppercase; color:var(--silver-dark); margin-bottom:1.5rem; display:block; }
 .unit-areas { display:flex; gap:2rem; flex-wrap:wrap; padding:1.5rem 0; border-top:1px solid var(--ice-bg); border-bottom:1px solid var(--ice-bg); margin-bottom:2rem; }
 .unit-area-item { text-align:center; }
-.unit-area-num { font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--gold-dark); display:block; }
+.unit-area-num { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--gold-dark); display:block; }
 .unit-area-unit { font-size:0.57rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--muted-text); }
 .unit-room-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin-bottom:2rem; }
 .unit-room { padding:0.8rem 1rem; background:var(--ice-pale); border-left:2px solid var(--ice-deep); transition:all 0.25s; }
 .unit-room:hover { border-left-color:var(--gold); background:var(--ice-light); }
 .unit-room-name { font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--silver-dark); margin-bottom:0.2rem; }
-.unit-room-dim { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--dark-text); }
+.unit-room-dim { font-family:'Playfair Display',serif; font-size:1rem; color:var(--dark-text); }
 .unit-extras { font-size:0.73rem; color:var(--muted-text); line-height:1.85; margin-bottom:1.8rem; }
 
 /* AMENITIES — NAVY WITH SLIDER */
@@ -260,9 +260,9 @@ section .container { padding:3rem 0 !important; }
 .amenity-slide-content { position:relative; z-index:2; padding:3.5rem 4rem; height:100%; display:flex; flex-direction:column; justify-content:flex-end; }
 .amenity-slide-eyebrow { font-size:0.58rem; letter-spacing:0.45em; text-transform:uppercase; color:var(--gold); margin-bottom:0.7rem; }
 .amenity-slide-icon { font-size:2.8rem; margin-bottom:0.8rem; }
-.amenity-slide-title { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--white); margin-bottom:0.5rem; letter-spacing:0.04em; }
+.amenity-slide-title { font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:300; color:var(--white); margin-bottom:0.5rem; letter-spacing:0.04em; }
 .amenity-slide-desc { font-size:0.8rem; color:rgba(255,255,255,0.72); line-height:1.85; max-width:380px; }
-.amenity-slide-num { position:absolute; top:3rem; right:4rem; font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; color:rgba(184,212,232,0.06); line-height:1; z-index:1; }
+.amenity-slide-num { position:absolute; top:3rem; right:4rem; font-family:'Playfair Display',serif; font-size:5rem; font-weight:300; color:rgba(184,212,232,0.06); line-height:1; z-index:1; }
 .amenity-slider-controls { position:absolute; bottom:2rem; right:3rem; z-index:5; display:flex; gap:0.5rem; }
 .am-ctrl { width:38px; height:38px; border:1px solid rgba(255,255,255,0.25); background:rgba(10,22,40,0.4); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.3s; color:var(--white); font-size:0.85rem; }
 .am-ctrl:hover { background:var(--gold); border-color:var(--gold); color:var(--navy); }
@@ -282,14 +282,14 @@ section .container { padding:3rem 0 !important; }
 .highlight-intro { color:var(--muted-text); font-size:0.85rem; line-height:1.95; margin-bottom:2.5rem; }
 .highlight-item { padding:1.8rem 0; border-bottom:1px solid rgba(164,200,224,0.4); display:flex; align-items:flex-start; gap:2rem; transition:all 0.35s; }
 .highlight-item:hover { padding-left:0.8rem; }
-.highlight-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:rgba(201,169,110,0.4); min-width:48px; line-height:1.2; }
-.highlight-text { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:500; color:var(--dark-text); line-height:1.35; }
+.highlight-num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:300; color:rgba(201,169,110,0.4); min-width:48px; line-height:1.2; }
+.highlight-text { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:500; color:var(--dark-text); line-height:1.35; }
 .highlight-sub { font-size:0.73rem; color:var(--muted-text); margin-top:0.3rem; line-height:1.7; }
 .highlight-img-frame { position:relative; width:100%; height:520px; overflow:hidden; }
 .highlight-img-frame::before { content:''; position:absolute; top:-18px; right:-18px; bottom:18px; left:18px; border:1px solid rgba(164,200,224,0.35); z-index:0; pointer-events:none; }
 .highlight-img-inner { position:absolute; inset:0; background:linear-gradient(135deg,var(--ice-bg) 0%,var(--ice-light) 50%,var(--ice-bg) 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
 .highlight-img-badge { position:absolute; bottom:2rem; left:2rem; background:var(--navy); padding:1rem 1.8rem; z-index:2; }
-.highlight-img-badge .val { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--gold-light); display:block; }
+.highlight-img-badge .val { font-family:'Playfair Display',serif; font-size:2rem; color:var(--gold-light); display:block; }
 .highlight-img-badge .lbl { font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--silver-dark); }
 
 /* GALLERY — DARK */
@@ -329,7 +329,7 @@ section .container { padding:3rem 0 !important; }
 .loc-distances .section-label { font-size:0.57rem; }
 .dist-item { display:flex; justify-content:space-between; align-items:center; padding:0.65rem 0; border-bottom:1px solid var(--ice-bg); }
 .dist-place { font-size:0.76rem; color:var(--mid-text); display:flex; align-items:center; gap:0.5rem; }
-.dist-km { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold-dark); }
+.dist-km { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--gold-dark); }
 .loc-cta-block { padding:1.5rem 1.8rem; background:var(--ice-pale); border-top:1px solid var(--ice-bg); }
 
 /* POSSESSION */
@@ -337,12 +337,12 @@ section .container { padding:3rem 0 !important; }
 #possession::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(-45deg,transparent,transparent 50px,rgba(201,169,110,0.018) 50px,rgba(201,169,110,0.018) 51px); }
 .possession-content { position:relative; z-index:2; }
 .possession-label-text { font-size:0.63rem; letter-spacing:0.5em; text-transform:uppercase; color:var(--silver-dark); margin-bottom:1rem; display:block; }
-.possession-year { font-family:'Cormorant Garamond',serif; font-size:clamp(4.5rem,13vw,9.5rem); font-weight:300; line-height:1; background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:0.12em; }
+.possession-year { font-family:'Playfair Display',serif; font-size:clamp(4.5rem,13vw,9.5rem); font-weight:300; line-height:1; background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:0.12em; }
 .possession-note { font-size:0.72rem; color:var(--silver-dark); margin-top:0.5rem; letter-spacing:0.15em; }
 .possession-badges { display:inline-flex; flex-wrap:wrap; justify-content:center; margin-top:2.5rem; border:1px solid rgba(201,169,110,0.15); }
 .possession-badge { padding:1rem 2.5rem; text-align:center; border-right:1px solid rgba(201,169,110,0.15); font-size:0.6rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--silver-dark); }
 .possession-badge:last-child { border-right:none; }
-.possession-badge strong { color:var(--gold-light); display:block; font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; margin-top:0.2rem; }
+.possession-badge strong { color:var(--gold-light); display:block; font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:400; margin-top:0.2rem; }
 
 /* CONTACT — WHITE */
 #contact { background:var(--white); padding:var(--section-vertical-padding) 0; }
@@ -369,7 +369,7 @@ section .container { padding:3rem 0 !important; }
 
 /* FOOTER */
 footer { background:#050d1a; padding:5rem 0 2rem; border-top:1px solid rgba(184,212,232,0.07); }
-.footer-brand { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; letter-spacing:0.3em; text-transform:uppercase; color:var(--white); }
+.footer-brand { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:300; letter-spacing:0.3em; text-transform:uppercase; color:var(--white); }
 .footer-rera { font-size:0.58rem; letter-spacing:0.25em; color:var(--silver-dark); text-transform:uppercase; margin-top:0.3rem; }
 .footer-link { display:block; font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--silver-dark); text-decoration:none; padding:0.4rem 0; transition:color 0.3s; }
 .footer-link:hover { color:var(--gold); }
@@ -462,6 +462,11 @@ footer { background:#050d1a; padding:5rem 0 2rem; border-top:1px solid rgba(184,
   .block-title, .blocktitle, .section-title, .section-label, .section-divider { text-align:center !important; margin-left:auto; margin-right:auto; }
   .section-divider { margin-top:1.4rem; margin-bottom:1.4rem; }
 }
+
+/* ensure download brochure button aligns center when visible */
+#floorplans .text-lg-end { text-align:center !important; }
+#floorplans .btn-luxury-outline.dark-ol { display:inline-block; margin:auto; }
+
 
 /* previous responsive centering rules removed per user request – restore original alignment */
 /* any additional layout tweaks for small screens should be added explicitly as needed */
