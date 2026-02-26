@@ -158,7 +158,7 @@ section .container { padding:3rem 0 !important; }
 .ov-dot { width:34px; height:4px; background:rgba(10,22,40,0.06); border:none; cursor:pointer; transition:all 0.35s; }
 .ov-dot.active { width:54px; background:var(--gold); }
 
-/* ensure overview-grid inside slide keeps original look but without outer border doubling */
+/* ensure overview-grid inside slide keeps original look but without outer border doupling */
 .overview-slider .overview-grid { background:transparent; border:none; gap:1rem; }
 .overview-slider .overview-card { margin:0.4rem; }
 
@@ -167,9 +167,18 @@ section .container { padding:3rem 0 !important; }
   .overview-slider .overview-grid { grid-template-columns:repeat(2,1fr); }
   .overview-controls { right:1.2rem; bottom:1rem; }
 }
+@media (max-width:768px) {
+  /* Stack overview columns vertically and center */
+  #overview .row { flex-direction:column; align-items:center; }
+  #overview .col-lg-6 { width:100% !important; max-width:500px; }
+  .overview-intro { text-align:center; margin:1.5rem 0; }
+  .overview-slider .overview-grid { grid-template-columns:repeat(2,1fr); max-width:100%; }
+}
 @media (max-width:576px) {
   .overview-slider .overview-grid { grid-template-columns:1fr; }
   .ov-prev, .ov-next { width:36px; height:36px; font-size:1.05rem; }
+  #overview .col-lg-6 { width:100% !important; }
+  .overview-card { padding:1.5rem 1rem !important; }
 }
 
 /* PRICING — NAVY */
@@ -452,6 +461,24 @@ footer { background:#050d1a; padding:5rem 0 2rem; border-top:1px solid rgba(184,
 @media (min-width:992px) {
   .block-title, .blocktitle, .section-title, .section-label, .section-divider { text-align:center !important; margin-left:auto; margin-right:auto; }
   .section-divider { margin-top:1.4rem; margin-bottom:1.4rem; }
+}
+
+/* previous responsive centering rules removed per user request – restore original alignment */
+/* any additional layout tweaks for small screens should be added explicitly as needed */
+
+/* note: general content will follow default Bootstrap/section rules and will not be forced centered */
+
+/* paragraphs inside any section should be centered */
+section p { text-align:center; }
+
+/* ensure all buttons inside sections are centered by default */
+section .btn-luxury-primary,
+section .btn-luxury-outline,
+section .btn-small,
+section .btn-pricing,
+section .btn-submit-luxury {
+  display:block;
+  margin:1rem auto;
 }
 
 /* Image positioning for inserted section images */
