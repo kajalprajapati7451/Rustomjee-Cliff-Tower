@@ -128,25 +128,21 @@ if (form) {
     error.classList.remove('show');
 
     const name   = document.getElementById('name').value.trim();
-    const mobile = document.getElementById('mobile').value.trim();
-    const email  = document.getElementById('email').value.trim();
-    const type   = document.getElementById('resType').value;
+    const mobile = document.getElementById('mobile').value.trim().replace(/\D/g, '');
 
     const err = (msg) => { error.textContent = msg; error.classList.add('show'); };
 
     if (!name || name.length < 2)           return err('Please enter your full name.');
     if (!/^[6-9]\d{9}$/.test(mobile))       return err('Please enter a valid 10-digit mobile number.');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return err('Please enter a valid email address.');
-    if (!type)                               return err('Please select a residence type.');
 
     const btn = form.querySelector('.btn-submit-luxury');
-    btn.textContent = 'Submitting…';
+    btn.textContent = 'Sending…';
     btn.disabled = true;
 
     setTimeout(() => {
       success.classList.add('show');
       form.reset();
-      btn.textContent = 'Submit Enquiry';
+      btn.textContent = 'Send Enquiry';
       btn.disabled = false;
     }, 1400);
   });
@@ -199,5 +195,41 @@ if (scrollToTopBtn) {
 
   scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* === HERO CTA FORM SUBMISSION === */
+const heroCTAForm = document.getElementById('heroCTAForm');
+if (heroCTAForm) {
+  heroCTAForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.querySelector('input[name="name"]').value.trim();
+    const phone = this.querySelector('input[name="phone"]').value.trim();
+    const preference = this.querySelector('select[name="preference"]').value;
+    
+    if (!name || name.length < 2) {
+      alert('Please enter your full name.');
+      return;
+    }
+    if (!/^[6-9]\d{9}$/.test(phone.replace(/\D/g, ''))) {
+      alert('Please enter a valid 10-digit phone number.');
+      return;
+    }
+    if (!preference) {
+      alert('Please select a preference.');
+      return;
+    }
+    
+    // Show success message
+    const btn = this.querySelector('.btn-cta-primary');
+    const originalText = btn.textContent;
+    btn.textContent = 'Request Sent! 🎉';
+    btn.disabled = true;
+    
+    setTimeout(() => {
+      this.reset();
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }, 2000);
   });
 }
