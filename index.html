@@ -1,911 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Rustomjee Cliff Tower — Ultra-luxury 4 & 5 Bedroom residences at Mount Mary, Bandra West. Starting ₹38 Cr. MahaRERA: P51800080156."/>
-  <title>Rustomjee Cliff Tower | Ultra-Luxury Residences | Mount Mary, Bandra West</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Rustomjee Cliff Tower — Ultra-luxury 4 & 5 Bedroom residences at Mount Mary, Bandra West. Starting ₹38 Cr. MahaRERA: P51800080156."/>
+<title>Rustomjee Cliff Tower | Ultra-Luxury | Mount Mary, Bandra West</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"/>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ══════════════════════════════
-     MOBILE STICKY CTA BAR
-══════════════════════════════ -->
-<div class="mobile-sticky-cta">
-  <a href="tel:+919876543210" class="cta-btn-call" title="Call us">
-    <i class="bi bi-telephone-fill"></i> Call
-  </a>
-  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20Rustomjee%20Cliff%20Tower" class="cta-btn-whatsapp" title="WhatsApp us" target="_blank" rel="noopener">
-    <i class="bi bi-whatsapp"></i> WhatsApp
-  </a>
-  <a href="#contact" class="cta-btn-enquire">
-    <i class="bi bi-envelope-fill"></i> Enquire
-  </a>
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:+919876543210" class="mb-btn mb-call"><i class="bi bi-telephone-fill"></i>Call</a>
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20Rustomjee%20Cliff%20Tower" class="mb-btn mb-wa" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+  <a href="#contact" class="mb-btn mb-enq"><i class="bi bi-envelope-fill"></i>Enquire</a>
 </div>
 
-<!-- ══════════════════════════════
-     NAVBAR
-══════════════════════════════ -->
-<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#hero">
-      <span class="navbar-brand-text">Cliff Tower</span>
-      <!-- <span class="navbar-brand-sub">Mount Mary, Bandra West · Rustomjee</span> -->
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="#floorplans">Plans</a></li>
-        <li class="nav-item"><a class="nav-link" href="#unitplans">Units</a></li>
-        <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
-        <li class="nav-item ms-lg-3">
-          <a class="nav-link btn-enquire-nav" href="#contact">Enquire Now</a>
+<!-- DRAWER OVERLAY -->
+<div id="drawer-overlay"></div>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Cliff Tower</a>
+
+      <!-- Desktop inline nav (hidden on mobile) -->
+      <ul class="nav-links-desktop">
+        <li><a href="#highlights">Overview</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#floorplans">Plans</a></li>
+        <li><a href="#developer">Developer</a></li>
+        <li><a href="#contact" class="nav-cta">Enquire Now →</a></li>
+      </ul>
+
+      <!-- Hamburger: 3x3 dot grid → X (mobile only) -->
+      <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <div class="hb-dots">
+          <span class="hb-dot"></span><span class="hb-dot"></span><span class="hb-dot"></span>
+          <span class="hb-dot"></span><span class="hb-dot"></span><span class="hb-dot"></span>
+          <span class="hb-dot"></span><span class="hb-dot"></span><span class="hb-dot"></span>
+        </div>
+        <i class="bi bi-x hb-close"></i>
+      </button>
+
+      <!-- Mobile Drawer (slides in from left) -->
+      <ul id="nav-links">
+        <li class="drawer-header">
+          <span class="drawer-header-brand">Cliff Tower</span>
+          <span class="drawer-header-sub">Rustomjee · Mount Mary, Bandra West</span>
         </li>
+        <li class="nav-item"><a href="#highlights"><span class="nav-link-num">01</span>Overview</a></li>
+        <li class="nav-item"><a href="#pricing"><span class="nav-link-num">02</span>Pricing</a></li>
+        <li class="nav-item"><a href="#amenities"><span class="nav-link-num">03</span>Amenities</a></li>
+        <li class="nav-item"><a href="#location"><span class="nav-link-num">04</span>Location</a></li>
+        <li class="nav-item"><a href="#floorplans"><span class="nav-link-num">05</span>Floor Plans</a></li>
+        <li class="nav-item"><a href="#developer"><span class="nav-link-num">06</span>Developer</a></li>
+        <li class="drawer-cta-item"><a href="#contact" class="nav-cta">Enquire Now →</a></li>
+        <li class="drawer-footer-item">MahaRERA · P51800080156</li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-<!-- ══════════════════════════════
-     HERO SLIDER
-══════════════════════════════ -->
+<!-- ══════════════════════════════════
+  1. HERO + FORM (with background image)
+══════════════════════════════════ -->
 <section id="hero">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6500">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
-    <div class="carousel-inner h-100">
+  <div class="hero-grid-pattern"></div>
+  <div class="wrap" style="width:100%;max-width:1200px;">
+    <div class="hero-grid">
 
-      <!-- Slide 1 — Tower -->
-      <div class="carousel-item active hero-slide slide-1">
-        <div class="slide-bg">
-          <img src="images/HOME%201.webp" alt="Cliff Tower" class="section-main-img"/>
-          <svg style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);opacity:0.08;width:280px;height:480px;" viewBox="0 0 280 480" preserveAspectRatio="xMidYMax meet">
-            <rect x="90" y="40" width="100" height="440" fill="#b8d4e8"/>
-            <rect x="100" y="55" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="122" y="55" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="144" y="55" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="166" y="55" width="16" height="22" fill="#0a1628" opacity="0.9"/>
-            <rect x="100" y="88" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="122" y="88" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="144" y="88" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="166" y="88" width="16" height="22" fill="#0a1628" opacity="0.9"/>
-            <rect x="100" y="121" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="122" y="121" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="144" y="121" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="166" y="121" width="16" height="22" fill="#0a1628" opacity="0.9"/>
-            <rect x="100" y="154" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="122" y="154" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="144" y="154" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="166" y="154" width="16" height="22" fill="#0a1628" opacity="0.9"/>
-            <rect x="100" y="187" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="122" y="187" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="144" y="187" width="16" height="22" fill="#0a1628" opacity="0.9"/><rect x="166" y="187" width="16" height="22" fill="#0a1628" opacity="0.9"/>
-            <rect x="80" y="32" width="120" height="12" fill="#c9a96e" opacity="0.5"/>
-            <polygon points="140,6 100,32 180,32" fill="#c9a96e" opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="d-flex align-items-center justify-content-center h-100">
-          <div class="hero-content">
-            <div class="hero-eyebrow">Rustomjee · Mount Mary · Bandra West</div>
-            <h1 class="hero-title">Cliff<br>Tower</h1>
-            <p class="hero-subtitle">Ultra-Luxury Residences</p>
-            <div class="hero-divider"></div>
-            <p class="hero-rera">MahaRERA Approved · P51800080156</p>
-            <div class="hero-ctas">
-              <a href="#contact" class="btn-luxury-primary">Enquire Now</a>
-              <a href="#floorplans" class="btn-luxury-outline">View Floor Plans</a>
-            </div>
-          </div>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat-item"><span class="hero-stat-num">2</span><span class="hero-stat-label">Residences Per Floor</span></div>
-          <div class="hero-stat-item"><span class="hero-stat-num">20</span><span class="hero-stat-label">Habitable Floors</span></div>
-          <div class="hero-stat-item"><span class="hero-stat-num">270°</span><span class="hero-stat-label">Sea Views</span></div>
-          <div class="hero-stat-item"><span class="hero-stat-num">11'9"</span><span class="hero-stat-label">Slab-to-Slab</span></div>
-        </div>
-      </div>
-
-      <!-- Slide 2 — Sea Views -->
-      <div class="carousel-item hero-slide slide-2">
-        <div class="slide-bg">
-          <img src="images/gallery 3.webp" alt="Sea Views" class="section-main-img"/>
-          <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:55%;opacity:0.07;" viewBox="0 0 1200 380" preserveAspectRatio="none">
-            <path d="M0 280 Q200 240 400 260 Q600 280 800 245 Q1000 210 1200 240 L1200 380 L0 380 Z" fill="#b8d4e8"/>
-            <path d="M0 330 Q300 310 600 320 Q900 330 1200 310 L1200 380 L0 380 Z" fill="#8ab8d0" opacity="0.6"/>
-            <line x1="380" y1="165" x2="490" y2="265" stroke="#c9a96e" stroke-width="2" opacity="0.45"/>
-            <line x1="465" y1="145" x2="570" y2="265" stroke="#c9a96e" stroke-width="2" opacity="0.45"/>
-            <line x1="548" y1="165" x2="650" y2="265" stroke="#c9a96e" stroke-width="2" opacity="0.45"/>
-            <line x1="380" y1="155" x2="660" y2="155" stroke="#c9a96e" stroke-width="2.5" opacity="0.35"/>
-            <circle cx="380" cy="155" r="7" fill="#c9a96e" opacity="0.4"/>
-            <circle cx="660" cy="155" r="7" fill="#c9a96e" opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="d-flex align-items-center justify-content-center h-100">
-          <div class="hero-content">
-            <div class="hero-eyebrow" style="animation:fadeInUp 1s 0.3s both;">270° Unobstructed Views</div>
-            <h1 class="hero-title" style="animation:fadeInUp 1.2s 0.5s both;">Arabian<br>Sea &<br>City</h1>
-            <div class="hero-divider" style="animation:fadeInUp 1s 0.9s both;"></div>
-            <p class="hero-subtitle" style="animation:fadeInUp 1s 0.8s both;">The Sea Link, Permanent & Uninterrupted</p>
-            <div class="hero-ctas" style="animation:fadeInUp 1s 1.2s both;">
-              <a href="#contact" class="btn-luxury-primary">Enquire Now</a>
-              <a href="#pricing" class="btn-luxury-outline">View Pricing</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 — Boutique -->
-      <div class="carousel-item hero-slide slide-3">
-        <div class="slide-bg">
-          <img src="images/HOME%201.webp" alt="Boutique" class="section-main-img"/>
-          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.055;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
-            <rect x="80" y="80" width="420" height="540" fill="none" stroke="#b8d4e8" stroke-width="1"/>
-            <rect x="140" y="140" width="300" height="420" fill="none" stroke="#b8d4e8" stroke-width="0.5"/>
-            <rect x="700" y="80" width="420" height="540" fill="none" stroke="#b8d4e8" stroke-width="1"/>
-            <line x1="80" y1="400" x2="500" y2="400" stroke="#c9a96e" stroke-width="1"/>
-            <line x1="700" y1="330" x2="1120" y2="330" stroke="#c9a96e" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="d-flex align-items-center justify-content-center h-100">
-          <div class="hero-content">
-            <div class="hero-eyebrow" style="animation:fadeInUp 1s 0.3s both;">Boutique · Exclusive · Refined</div>
-            <h1 class="hero-title" style="animation:fadeInUp 1.2s 0.5s both;">Only 2<br>Per<br>Floor</h1>
-            <div class="hero-divider" style="animation:fadeInUp 1s 0.9s both;"></div>
-            <p class="hero-subtitle" style="animation:fadeInUp 1s 0.8s both;">Curated for a Circle That Values Privacy</p>
-            <div class="hero-ctas" style="animation:fadeInUp 1s 1.2s both;">
-              <a href="#contact" class="btn-luxury-primary">Enquire Now</a>
-              <a href="#unitplans" class="btn-luxury-outline">Unit Plans</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     HERO CTA — CONVERSION FORM
-══════════════════════════════ -->
-<section id="hero-cta">
-  <div class="container">
-    <div class="hero-cta-content">
-      <!-- LEFT: Project Highlights -->
+      <!-- LEFT -->
       <div>
-      <h2 style="color: rgb(0, 0, 20);">Rustomjee<br>Cliff Tower</h2>
-       <div class="price-badge" style="color: rgb(79, 79, 126); text-align: center;">
-    Starting ₹38 Crore
-</div>
-        <ul class="hero-cta-bullets">
-          <li>Only 2 Residences Per Floor</li>
-          <li>270° Unobstructed Sea Views</li>
-          <li>4 &amp; 5 Bedroom Ultra-Luxury</li>
-          <li>MahaRERA Approved · Oct 2030</li>
+        <div class="hero-location">
+          <i class="bi bi-geo-alt-fill" style="font-size:0.65rem;color:var(--gold-d);"></i>
+          Mount Mary · Bandra West · Mumbai
+        </div>
+        <p class="hero-dev">Rustomjee</p>
+        <h1 class="h1">Cliff<br>Tower</h1>
+        <p class="hero-positioning">Mumbai's most coveted ultra-luxury hilltop address</p>
+
+        <div class="hero-badges">
+          <span class="badge-price">₹ 38 Cr* Onwards</span>
+          <span class="badge-config">4 &amp; 5 BHK Villas</span>
+        </div>
+
+        <ul class="hero-bullets">
+          <li><span class="bdot"></span>Only 2 residences per floor — boutique &amp; ultra-private</li>
+          <li><span class="bdot"></span>270° unobstructed Arabian Sea &amp; Sea Link views</li>
+          <li><span class="bdot"></span>2,723–4,450 Sq.Ft. usable · MahaRERA approved</li>
         </ul>
-        <p style="color:var(--mid-text);font-size:0.95rem;line-height:1.6;">Mount Mary, Bandra West — Mumbai's Most Coveted Address</p>
+
+        <p class="hero-rera">
+          <i class="bi bi-shield-check" style="color:var(--gold-d);margin-right:0.4rem;"></i>
+          MahaRERA · P51800080156 · Completion: October 2030
+        </p>
+
+        <div class="hero-stats">
+          <div class="hstat"><span class="hstat-n">2</span><span class="hstat-l">Per Floor</span></div>
+          <div class="hstat"><span class="hstat-n">20</span><span class="hstat-l">Floors</span></div>
+          <div class="hstat"><span class="hstat-n">270°</span><span class="hstat-l">Sea Views</span></div>
+          <div class="hstat"><span class="hstat-n">11'9"</span><span class="hstat-l">Ceiling Ht.</span></div>
+        </div>
       </div>
 
-      <!-- RIGHT: Conversion Form -->
-      <div class="hero-cta-form">
-        <h3>Get Started</h3>
-        <form class="hero-cta-form-el" id="heroCTAForm">
-          <div class="form-group">
-            <label>Full Name *</label>
-            <input type="text" class="form-control" name="name" placeholder="Your name" required>
+      <!-- RIGHT: Form -->
+      <div class="hero-form">
+        <h3 class="form-title">Request Details</h3>
+        <p class="form-sub">Response within 24 hours</p>
+
+        <form id="heroForm">
+          <div class="fgroup">
+            <label class="flabel" for="hf-name">Full Name *</label>
+            <input class="finput" type="text" id="hf-name" name="name" placeholder="Your full name" required/>
           </div>
-          <div class="form-group">
-            <label>Phone *</label>
-            <input type="tel" class="form-control" name="phone" placeholder="+91 XXXXX XXXXX" required>
+          <div class="fgroup">
+            <label class="flabel" for="hf-phone">Phone Number *</label>
+            <input class="finput" type="tel" id="hf-phone" name="phone" placeholder="+91 XXXXX XXXXX" required/>
           </div>
-          <div class="form-group">
-            <label>Preference *</label>
-            <select class="form-control" name="preference" required>
+          <div class="fgroup">
+            <label class="flabel" for="hf-pref">I Want To *</label>
+            <select class="finput" id="hf-pref" name="preference" required>
               <option value="">— Select —</option>
-              <option value="4bhk">4 Bedroom Residence</option>
-              <option value="5bhk">5 Bedroom Residence</option>
-              <option value="info">Project Information</option>
+              <option value="site-visit">Book a Site Visit</option>
+              <option value="cost-sheet">Get Cost Sheet</option>
+              <option value="4bhk">4 BHK Details</option>
+              <option value="5bhk">5 BHK Details</option>
             </select>
           </div>
-          <button type="submit" class="btn-cta-primary">Get Cost Sheet</button>
-          <div class="privacy-note">
-            By clicking "Get Cost Sheet", you agree to our <a href="#" style="color:var(--gold-dark);text-decoration:underline;">Privacy Policy</a>. We'll contact you within 24 hours.
-          </div>
+
+          <button type="submit" class="btn-cta" id="heroBtn">
+            <i class="bi bi-file-earmark-text"></i> Get Cost Sheet
+          </button>
+          <button type="button" class="btn-cta-alt" onclick="document.getElementById('hf-pref').value='site-visit';document.getElementById('heroBtn').innerHTML='<i class=\'bi bi-calendar-check\'></i> Book Site Visit →';">
+            <i class="bi bi-calendar-check"></i> Book a Site Visit →
+          </button>
+
+          <p class="form-consent">
+            By submitting you agree to our <a href="#">Privacy Policy</a> &amp; consent to being contacted.
+          </p>
         </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     OVERVIEW — LIGHT ICE
-══════════════════════════════ -->
-<section id="overview">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row align-items-end mb-2">
-      <div class="col-lg-6 reveal">
-        <span class="section-label dark">Project Overview</span>
-        <h2 class="section-title dark">An Address<br><em>Above It All</em></h2>
-        <div class="section-divider dark"></div>
-      </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <p class="overview-intro">A niche landmark tower rises above Mount Mary — a hilltop address of rare distinction. Just a handful of homes, two per floor, designed for privacy and belonging. This is a residence for a curated circle, not a passing crowd.</p>
-      </div>
-    </div>
-    <div class="overview-slider-wrap">
-      <div class="overview-slider">
-        <div class="overview-slide">
-          <div class="overview-grid reveal">
-            <div class="overview-card"><div class="overview-icon-wrap">📍</div><span class="overview-lbl">Location</span><div class="overview-val">Mount Mary<br>Bandra West</div><div class="overview-sub">Mumbai · 400050</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">🏗️</div><span class="overview-lbl">Project Type</span><div class="overview-val">Redevelopment</div><div class="overview-sub">Ultra Luxury</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">🏢</div><span class="overview-lbl">Elevation</span><div class="overview-val">1 Tower · 20<br>Habitable Floors</div><div class="overview-sub">4B + G + 5 Podium + Rooftop</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">🏠</div><span class="overview-lbl">Units Per Floor</span><div class="overview-val">Only 2<br>Residences</div><div class="overview-sub">Boutique · Hyper-Private</div></div>
-          </div>
-        </div>
-
-        <div class="overview-slide">
-          <div class="overview-grid reveal">
-            <div class="overview-card"><div class="overview-icon-wrap">📐</div><span class="overview-lbl">Land Parcel</span><div class="overview-val">0.502 Acres</div><div class="overview-sub">2,032 Sq. Mt.</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">📏</div><span class="overview-lbl">Slab-to-Slab</span><div class="overview-val">11.9 Feet</div><div class="overview-sub">Floor-to-Floor 11'9"</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">🅿️</div><span class="overview-lbl">Parking</span><div class="overview-val">Conventional<br>Car Parking</div><div class="overview-sub">4 Basement Levels</div></div>
-            <div class="overview-card"><div class="overview-icon-wrap">🔨</div><span class="overview-lbl">Construction Stage</span><div class="overview-val">Excavation</div><div class="overview-sub">RERA Completion: Oct 2030</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="overview-controls">
-        <button class="ov-prev" aria-label="Previous">‹</button>
-        <div class="ov-dots">
-          <button class="ov-dot active" data-index="0" aria-label="Slide 1"></button>
-          <button class="ov-dot" data-index="1" aria-label="Slide 2"></button>
-        </div>
-        <button class="ov-next" aria-label="Next">›</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     PRICING — DARK NAVY
-══════════════════════════════ -->
-<section id="pricing">
-  <div class="pricing-bg-art"></div>
-  <div class="container" style="padding:7rem 0;">
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-6 text-center reveal">
-        <span class="section-label">Available Inventory</span>
-        <h2 class="section-title">Curated<br><em>Residences</em></h2>
-        <div class="section-divider center"></div>
-        <p style="color:var(--silver-dark);font-size:0.83rem;letter-spacing:0.1em;">All-inclusive pricing · Limited ultra-luxury residences</p>
-      </div>
-    </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-5 reveal reveal-delay-1">
-        <div class="pricing-card">
-          <span class="pricing-badge">4 Bedroom Residence</span>
-          <div class="pricing-type">4 BHK</div>
-          <div class="pricing-carpet">RERA Carpet · 2,723.29 Sq. Ft. · 253 Sq. M.</div>
-          <div class="pricing-price">₹ 38.00 Cr</div>
-          <div class="pricing-price-label">Starting Price · All Inclusive</div>
-          <ul class="pricing-features">
-            <li>Master Suite + 3 Bedrooms</li>
-            <li>Living &amp; Entertainment Lounge — 576 Sq. Ft.</li>
-            <li>Dedicated Deck — 144–210 Sq. Ft.</li>
-            <li>Kitchen — 149 Sq. Ft.</li>
-            <li>Staff Room + Utility</li>
-            <li>Elderly Friendly Bathroom</li>
-            <li>Available: Typical Floors 3rd–17th</li>
-          </ul>
-          <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Consultation</button>
-        </div>
-      </div>
-      <div class="col-lg-5 reveal reveal-delay-2">
-        <div class="pricing-card featured">
-          <span class="pricing-badge">5 Bedroom Residence</span>
-          <div class="pricing-type">5 BHK</div>
-          <div class="pricing-carpet">RERA Carpet · 4,355.22 Sq. Ft. · 404 Sq. M.</div>
-          <div class="pricing-price">₹ 61.50 Cr</div>
-          <div class="pricing-price-label">Starting Price · All Inclusive</div>
-          <ul class="pricing-features">
-            <li>Master Suite + 4 Bedrooms</li>
-            <li>Living &amp; Dining Lounge — 1,027 Sq. Ft.</li>
-            <li>Family TV Lounge — 322 Sq. Ft.</li>
-            <li>Deck — 308 Sq. Ft.</li>
-            <li>Kitchen — 226 Sq. Ft.</li>
-            <li>2 Staff Rooms + Pantry + Utility</li>
-            <li>Available: Refuge Floors 2nd, 9th &amp; 16th</li>
-          </ul>
-          <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Consultation</button>
-        </div>
-      </div>
-    </div>
-    <div class="payment-band reveal">
-      <div class="payment-band-item"><div class="lbl">Payment Plan</div><div class="val">CLPP</div></div>
-      <div class="payment-band-item"><div class="lbl">Completion</div><div class="val">October 2030</div></div>
-      <div class="payment-band-item"><div class="lbl">MahaRERA</div><div class="val">P51800080156</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     FLOOR PLANS — ICE LIGHT
-══════════════════════════════ -->
-<section id="floorplans">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row align-items-end mb-5">
-      <div class="col-lg-6 reveal">
-        <span class="section-label dark">Floor Plans</span>
-        <h2 class="section-title dark">Architectural<br><em>Excellence</em></h2>
-        <div class="section-divider dark"></div>
-        <p style="color:var(--muted-text);font-size:0.85rem;line-height:1.9;">Two residences per floor — meticulously planned for maximum privacy, natural light, and unobstructed views.</p>
-      </div>
-      <div class="col-lg-6 text-lg-end reveal reveal-delay-2">
-        <a href="#contact" class="btn-luxury-outline dark-ol"><i class="bi bi-download me-2"></i>Download Brochure</a>
-      </div>
-    </div>
-    <div class="row g-4">
-
-      <!-- 1st Floor -->
-      <div class="col-lg-6 reveal reveal-delay-1">
-        <div class="fp-card">
-          <div class="fp-preview">
-            <img src="images/1ST%20FLOOR%20UNIT%20PLAN.jpg" alt="1st floor plan" class="fp-image"/>
-            <svg viewBox="0 0 220 190" fill="none" width="190" height="165">
-              <rect x="20" y="12" width="180" height="158" stroke="#a4c8e0" stroke-width="0.9" fill="rgba(164,200,224,0.04)"/>
-              <rect x="32" y="22" width="75" height="55" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="117" y="22" width="73" height="65" stroke="#c9a96e" stroke-width="0.9" fill="rgba(201,169,110,0.05)"/>
-              <rect x="32" y="85" width="48" height="75" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="88" y="85" width="48" height="75" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="145" y="95" width="45" height="65" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="88" y="55" width="24" height="22" stroke="#a4c8e0" stroke-width="0.5" fill="rgba(164,200,224,0.07)"/>
-              <text x="110" y="180" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost,sans-serif" letter-spacing="2">1ST FLOOR · 4 BHK</text>
-            </svg>
-            <div class="fp-zoom"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="fp-body">
-            <div class="fp-name">1st Floor Plan</div>
-            <div class="fp-floors">Ground + 1 · 4 BHK · Flat No. 1</div>
-            <div class="fp-spec-row">
-              <div class="fp-spec"><strong>2,464.96</strong>RERA Carpet (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>336.91</strong>Deck (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>2,801.87</strong>Usable (Sq.Ft.)</div>
-            </div>
-            <p class="fp-desc">Master Suite + Walk-in Wardrobe, Bedroom 02, 03 &amp; 04, Living &amp; Entertainment Lounge, Dining, Kitchen, Staff Room, Staff Bath, Utility, Powder Room.</p>
-            <button class="btn-small dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">View Details</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Typical Floor -->
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="fp-card">
-          <div class="fp-preview">
-            <img src="images/TYPICAL%20UNIT%20PLAN.jpg" alt="typical floor plan" class="fp-image"/>
-            <svg viewBox="0 0 220 190" fill="none" width="190" height="165">
-              <rect x="10" y="10" width="200" height="165" stroke="#a4c8e0" stroke-width="0.9" fill="rgba(164,200,224,0.03)"/>
-              <rect x="22" y="20" width="85" height="60" stroke="#c9a96e" stroke-width="0.9" fill="rgba(201,169,110,0.05)"/>
-              <rect x="117" y="20" width="82" height="45" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="22" y="88" width="52" height="78" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="82" y="88" width="45" height="78" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="136" y="73" width="62" height="93" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="90" y="42" width="22" height="40" stroke="#a4c8e0" stroke-width="0.4" fill="rgba(164,200,224,0.07)"/>
-              <text x="110" y="180" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost,sans-serif" letter-spacing="2">TYPICAL · 4 BHK</text>
-            </svg>
-            <div class="fp-zoom"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="fp-body">
-            <div class="fp-name">Typical Floor Plan</div>
-            <div class="fp-floors">3rd–8th, 10th–15th &amp; 17th · 4 BHK</div>
-            <div class="fp-spec-row">
-              <div class="fp-spec"><strong>2,464.96</strong>RERA Carpet (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>258.34</strong>Deck (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>2,723.29</strong>Usable (Sq.Ft.)</div>
-            </div>
-            <p class="fp-desc">Master Suite 192 Sq.Ft., Bedroom 02 159 Sq.Ft., Bedroom 03 158 Sq.Ft., Bedroom 04 213 Sq.Ft., Living &amp; Entertainment Lounge 576 Sq.Ft., Dining 291 Sq.Ft., Kitchen 149 Sq.Ft., Deck 144 Sq.Ft.</p>
-            <button class="btn-small dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">View Details</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Refuge 2nd & 9th -->
-      <div class="col-lg-6 reveal reveal-delay-1">
-        <div class="fp-card">
-          <div class="fp-preview">
-            <img src="images/REFUGE%20FLOOR%20PLAN.jpg" alt="refuge floor plan" class="fp-image"/>
-            <svg viewBox="0 0 220 190" fill="none" width="190" height="165">
-              <rect x="5" y="5" width="210" height="175" stroke="#a4c8e0" stroke-width="0.9" fill="rgba(164,200,224,0.02)"/>
-              <rect x="15" y="15" width="105" height="80" stroke="#c9a96e" stroke-width="0.9" fill="rgba(201,169,110,0.05)"/>
-              <rect x="128" y="15" width="80" height="65" stroke="#a4c8e0" stroke-width="0.7" fill="rgba(164,200,224,0.03)"/>
-              <rect x="15" y="103" width="55" height="68" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="78" y="103" width="50" height="68" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="138" y="88" width="70" height="83" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="15" y="103" width="55" height="30" stroke="rgba(164,200,224,0.3)" stroke-width="0.3" stroke-dasharray="3,3"/>
-              <text x="43" y="121" text-anchor="middle" fill="rgba(164,200,224,0.3)" font-size="5" font-family="Jost" letter-spacing="1">REFUGE</text>
-              <rect x="92" y="42" width="26" height="52" stroke="#a4c8e0" stroke-width="0.4" fill="rgba(164,200,224,0.07)"/>
-              <text x="110" y="182" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost,sans-serif" letter-spacing="2">REFUGE · 2ND &amp; 9TH · 5 BHK</text>
-            </svg>
-            <div class="fp-zoom"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="fp-body">
-            <div class="fp-name">Refuge Floor Plan</div>
-            <div class="fp-floors">2nd &amp; 9th Floor · 5 BHK</div>
-            <div class="fp-spec-row">
-              <div class="fp-spec"><strong>3,870.84</strong>RERA Carpet (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>484.38</strong>Deck (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>4,355.22</strong>Usable (Sq.Ft.)</div>
-            </div>
-            <p class="fp-desc">Master Suite 320 Sq.Ft., Family TV Lounge 322 Sq.Ft., Living &amp; Dining 1,027 Sq.Ft., Kitchen 226 Sq.Ft., Bedrooms 02–05, Walk-in Wardrobe, 2 Staff Rooms, Pantry, Refuge Area.</p>
-            <button class="btn-small dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">View Details</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Refuge 16th -->
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="fp-card">
-          <div class="fp-preview">
-            <img src="images/REFUGE%20FLOOR%20PLAN%2016TH%20FLOOR.jpg" alt="refuge 16th floor" class="fp-image"/>
-            <svg viewBox="0 0 220 190" fill="none" width="190" height="165">
-              <rect x="5" y="5" width="210" height="175" stroke="#a4c8e0" stroke-width="0.9" fill="rgba(164,200,224,0.02)"/>
-              <rect x="15" y="15" width="105" height="80" stroke="#c9a96e" stroke-width="0.9" fill="rgba(201,169,110,0.05)"/>
-              <rect x="128" y="15" width="80" height="65" stroke="#a4c8e0" stroke-width="0.7" fill="rgba(164,200,224,0.03)"/>
-              <rect x="15" y="103" width="55" height="68" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="78" y="103" width="50" height="68" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="138" y="88" width="70" height="83" stroke="#a4c8e0" stroke-width="0.6" fill="rgba(164,200,224,0.03)"/>
-              <rect x="15" y="103" width="45" height="35" stroke="#c9a96e" stroke-width="0.5" stroke-dasharray="2,2" fill="rgba(201,169,110,0.03)"/>
-              <text x="38" y="124" text-anchor="middle" fill="rgba(201,169,110,0.4)" font-size="4.5" font-family="Jost">SOCIETY</text>
-              <rect x="92" y="42" width="26" height="52" stroke="#a4c8e0" stroke-width="0.4" fill="rgba(164,200,224,0.07)"/>
-              <text x="110" y="182" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost,sans-serif" letter-spacing="2">REFUGE · 16TH FLOOR · 5 BHK</text>
-            </svg>
-            <div class="fp-zoom"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="fp-body">
-            <div class="fp-name">Refuge Floor Plan</div>
-            <div class="fp-floors">16th Floor · 5 BHK (Larger)</div>
-            <div class="fp-spec-row">
-              <div class="fp-spec"><strong>3,966.53</strong>RERA Carpet (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>484.38</strong>Deck (Sq.Ft.)</div>
-              <div class="fp-spec"><strong>4,450.91</strong>Usable (Sq.Ft.)</div>
-            </div>
-            <p class="fp-desc">Larger 16th floor 5 BHK with Society Office 103 Sq.Ft., Store Room 100 Sq.Ft., all 5 Bedrooms, Master Suite 320 Sq.Ft., Family TV Lounge, Living &amp; Dining 1,027 Sq.Ft.</p>
-            <button class="btn-small dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">View Details</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div style="text-align:center;margin-top:2rem;padding:1.2rem;background:rgba(164,200,224,0.08);border:1px solid rgba(164,200,224,0.2);font-size:0.7rem;color:var(--muted-text);" class="reveal">
-      <i class="bi bi-info-circle me-2" style="color:var(--gold-dark);"></i>
-      Plans are indicative. Room dimensions are per RERA. Minor variations (±3%) may occur.
-      <a href="#contact" style="color:var(--gold-dark);text-decoration:none;" class="ms-2">Contact us</a> for the complete floor plan brochure.
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     UNIT PLANS — WHITE (TABS)
-══════════════════════════════ -->
-<section id="unitplans">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row justify-content-center mb-4">
-      <div class="col-lg-8 text-center reveal">
-        <span class="section-label dark">Unit Plans</span>
-        <h2 class="section-title dark">Room-by-Room<br><em>Configurations</em></h2>
-        <div class="section-divider dark center"></div>
-        <p style="color:var(--muted-text);font-size:0.85rem;line-height:1.9;">Generously proportioned residences with exceptional room-to-room flow. Every inch designed for gracious living.</p>
-      </div>
-    </div>
-
-    <!-- Tabs -->
-    <div class="unit-tabs reveal">
-      <button class="unit-tab-btn active" data-tab="tab-4bhk">4 Bedroom Residence</button>
-      <button class="unit-tab-btn" data-tab="tab-5bhk-typical">5 BHK — 2nd &amp; 9th Floor</button>
-      <button class="unit-tab-btn" data-tab="tab-5bhk-16">5 BHK — 16th Floor</button>
-    </div>
-
-    <!-- 4 BHK Pane -->
-    <div class="unit-tab-pane active" id="tab-4bhk">
-      <div class="unit-showcase">
-        <div class="unit-plan-visual">
-          <img src="images/TYPICAL%20UNIT%20PLAN.jpg" alt="4BHK unit plan" class="unit-main-img"/>
-          <svg viewBox="0 0 320 420" fill="none" width="260" height="340">
-            <!-- 4 BHK unit plan art -->
-            <rect x="10" y="10" width="300" height="400" stroke="#a4c8e0" stroke-width="1.2" fill="rgba(164,200,224,0.04)"/>
-            <!-- Living -->
-            <rect x="22" y="22" width="140" height="100" stroke="#c9a96e" stroke-width="1" fill="rgba(201,169,110,0.06)"/>
-            <text x="92" y="75" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost" letter-spacing="1">LIVING &amp; LOUNGE</text>
-            <text x="92" y="86" text-anchor="middle" fill="#a8813d" font-size="6" font-family="Jost">18'9" × 28'0"</text>
-            <!-- Dining -->
-            <rect x="172" y="22" width="126" height="80" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="235" y="65" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost" letter-spacing="0.5">DINING</text>
-            <!-- Master Suite -->
-            <rect x="22" y="130" width="110" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="77" y="180" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">MASTER SUITE</text>
-            <text x="77" y="193" text-anchor="middle" fill="#5d7e96" font-size="6" font-family="Jost">16'0" × 12'0"</text>
-            <!-- BR 02 -->
-            <rect x="140" y="130" width="80" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="180" y="180" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 02</text>
-            <text x="180" y="193" text-anchor="middle" fill="#5d7e96" font-size="6" font-family="Jost">14'6" × 11'0"</text>
-            <!-- BR 03 -->
-            <rect x="228" y="108" width="80" height="120" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="268" y="170" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 03</text>
-            <!-- BR 04 -->
-            <rect x="22" y="233" width="120" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="82" y="282" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 04</text>
-            <!-- Kitchen -->
-            <rect x="150" y="233" width="90" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="195" y="282" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">KITCHEN</text>
-            <!-- Deck -->
-            <rect x="80" y="331" width="155" height="68" stroke="#c9a96e" stroke-width="0.8" stroke-dasharray="4,3" fill="rgba(201,169,110,0.03)"/>
-            <text x="158" y="370" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost" letter-spacing="1">DECK</text>
-            <!-- Core / lift -->
-            <rect x="248" y="233" width="58" height="90" stroke="#a4c8e0" stroke-width="0.5" fill="rgba(164,200,224,0.06)"/>
-            <text x="277" y="282" text-anchor="middle" fill="#5d7e96" font-size="5.5" font-family="Jost">STAFF+<br/>UTILITY</text>
-          </svg>
-        </div>
-        <div class="unit-info">
-          <div class="unit-badge">4<span style="font-size:2rem;"> BHK</span></div>
-          <span class="unit-badge-label">Four Bedroom Residence</span>
-          <div class="unit-areas">
-            <div class="unit-area-item"><span class="unit-area-num">2,464</span><span class="unit-area-unit">RERA Carpet Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">258</span><span class="unit-area-unit">Deck Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">2,723</span><span class="unit-area-unit">Total Usable Sq.Ft.</span></div>
-          </div>
-          <div class="unit-room-grid">
-            <div class="unit-room"><div class="unit-room-name">Living &amp; Lounge</div><div class="unit-room-dim">18'9" × 28'0"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Dining Lounge</div><div class="unit-room-dim">15'0" × 19'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Master Suite</div><div class="unit-room-dim">16'0" × 12'0"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 02</div><div class="unit-room-dim">14'6" × 11'0"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 03</div><div class="unit-room-dim">13'9" × 11'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 04</div><div class="unit-room-dim">12'0" × 16'5"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Kitchen</div><div class="unit-room-dim">12'3" × 12'2"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Deck</div><div class="unit-room-dim">17'3" × 8'6"</div></div>
-          </div>
-          <p class="unit-extras">Also includes: Master Walk-in Wardrobe 73 Sq.Ft., Master Bathroom 89 Sq.Ft., Powder Room 24 Sq.Ft., Staff Room 30 Sq.Ft., Staff Bath, Utility 44 Sq.Ft., Entrance Foyer 49 Sq.Ft., Passage, Elderly Friendly Bathroom.</p>
-          <button class="btn-luxury-primary dark-btn btn-unit-request">Request Detailed Layout</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5 BHK Typical Pane -->
-    <div class="unit-tab-pane" id="tab-5bhk-typical">
-      <div class="unit-showcase">
-        <div class="unit-plan-visual">
-          <img src="images/REFUGE%20UNIT%20PLAN.jpg" alt="5BHK unit plan" class="unit-main-img"/>
-          <svg viewBox="0 0 380 440" fill="none" width="300" height="360">
-            <rect x="10" y="10" width="360" height="420" stroke="#a4c8e0" stroke-width="1.2" fill="rgba(164,200,224,0.03)"/>
-            <!-- Large living -->
-            <rect x="22" y="22" width="200" height="115" stroke="#c9a96e" stroke-width="1" fill="rgba(201,169,110,0.06)"/>
-            <text x="122" y="82" text-anchor="middle" fill="#a8813d" font-size="7.5" font-family="Jost">LIVING &amp; DINING</text>
-            <text x="122" y="95" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost">36'9" × 28'0"</text>
-            <!-- Family TV -->
-            <rect x="232" y="22" width="128" height="80" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="65" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">FAMILY TV</text>
-            <text x="296" y="77" text-anchor="middle" fill="#5d7e96" font-size="6" font-family="Jost">16'6" × 19'6"</text>
-            <!-- Master Suite -->
-            <rect x="232" y="110" width="128" height="105" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="165" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">MASTER SUITE</text>
-            <text x="296" y="177" text-anchor="middle" fill="#5d7e96" font-size="6" font-family="Jost">13'6" × 23'9"</text>
-            <!-- BR02 -->
-            <rect x="22" y="145" width="100" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="72" y="196" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 02</text>
-            <!-- BR03 -->
-            <rect x="130" y="145" width="95" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="178" y="196" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 03</text>
-            <!-- BR04 + BR05 -->
-            <rect x="22" y="248" width="100" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="72" y="297" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 04</text>
-            <rect x="130" y="248" width="95" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="178" y="297" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 05</text>
-            <!-- Kitchen -->
-            <rect x="232" y="223" width="128" height="115" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="285" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">KITCHEN</text>
-            <text x="296" y="297" text-anchor="middle" fill="#5d7e96" font-size="6" font-family="Jost">17'0" × 13'6"</text>
-            <!-- Deck -->
-            <rect x="60" y="346" width="200" height="82" stroke="#c9a96e" stroke-width="0.8" stroke-dasharray="4,3" fill="rgba(201,169,110,0.03)"/>
-            <text x="160" y="393" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost">DECK · 308 Sq.Ft.</text>
-          </svg>
-        </div>
-        <div class="unit-info">
-          <div class="unit-badge">5<span style="font-size:2rem;"> BHK</span></div>
-          <span class="unit-badge-label">Five Bedroom Residence — 2nd &amp; 9th Floor</span>
-          <div class="unit-areas">
-            <div class="unit-area-item"><span class="unit-area-num">3,870</span><span class="unit-area-unit">RERA Carpet Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">484</span><span class="unit-area-unit">Deck Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">4,355</span><span class="unit-area-unit">Total Usable Sq.Ft.</span></div>
-          </div>
-          <div class="unit-room-grid">
-            <div class="unit-room"><div class="unit-room-name">Living &amp; Dining</div><div class="unit-room-dim">36'9" × 28'0"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Family TV Lounge</div><div class="unit-room-dim">16'6" × 19'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Master Suite</div><div class="unit-room-dim">13'6" × 23'9"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 02</div><div class="unit-room-dim">17'0" × 11'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 03</div><div class="unit-room-dim">11'9" × 17'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 04</div><div class="unit-room-dim">11'9" × 16'0"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 05</div><div class="unit-room-dim">13'0" × 16'6"</div></div>
-            <div class="unit-room"><div class="unit-room-name">Kitchen</div><div class="unit-room-dim">17'0" × 13'6"</div></div>
-          </div>
-          <p class="unit-extras">Also includes: Master Walk-in Wardrobe 157 Sq.Ft., Master Bathroom 219 Sq.Ft., Powder Toilet 25 Sq.Ft., Staff Room 01 &amp; 02, Pantry 42 Sq.Ft., 2 Utility areas, Entrance Foyer, Elderly Friendly Bathroom, Refuge Area.</p>
-          <button class="btn-luxury-primary dark-btn btn-unit-request">Request Detailed Layout</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5 BHK 16th -->
-    <div class="unit-tab-pane" id="tab-5bhk-16">
-      <div class="unit-showcase">
-        <div class="unit-plan-visual">
-          <img src="images/REFUGE%20UNIT%2016TH%20PLAN.jpg" alt="5BHK 16th unit plan" class="unit-main-img"/>
-          <svg viewBox="0 0 380 440" fill="none" width="300" height="360">
-            <rect x="10" y="10" width="360" height="420" stroke="#a4c8e0" stroke-width="1.2" fill="rgba(164,200,224,0.03)"/>
-            <rect x="22" y="22" width="200" height="115" stroke="#c9a96e" stroke-width="1" fill="rgba(201,169,110,0.06)"/>
-            <text x="122" y="80" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost">LIVING &amp; DINING</text>
-            <text x="122" y="92" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost">1,027 Sq.Ft.</text>
-            <rect x="232" y="22" width="128" height="80" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="65" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">FAMILY TV</text>
-            <rect x="232" y="110" width="128" height="105" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="165" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">MASTER SUITE</text>
-            <rect x="22" y="145" width="100" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="72" y="196" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 02</text>
-            <rect x="130" y="145" width="95" height="95" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="178" y="196" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 03</text>
-            <rect x="22" y="248" width="95" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="70" y="297" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 04</text>
-            <rect x="125" y="248" width="95" height="90" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="173" y="297" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">BEDROOM 05</text>
-            <rect x="232" y="223" width="128" height="85" stroke="#a4c8e0" stroke-width="0.8" fill="rgba(164,200,224,0.04)"/>
-            <text x="296" y="270" text-anchor="middle" fill="#5d7e96" font-size="6.5" font-family="Jost">KITCHEN</text>
-            <!-- Society Office (16th unique) -->
-            <rect x="232" y="315" width="128" height="55" stroke="#c9a96e" stroke-width="0.7" stroke-dasharray="3,2" fill="rgba(201,169,110,0.04)"/>
-            <text x="296" y="347" text-anchor="middle" fill="#a8813d" font-size="6.5" font-family="Jost">SOCIETY OFFICE</text>
-            <text x="296" y="359" text-anchor="middle" fill="#a8813d" font-size="5.5" font-family="Jost">103 Sq.Ft.</text>
-            <rect x="60" y="346" width="160" height="70" stroke="#c9a96e" stroke-width="0.8" stroke-dasharray="4,3" fill="rgba(201,169,110,0.03)"/>
-            <text x="140" y="387" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost">DECK · 308 Sq.Ft.</text>
-          </svg>
-        </div>
-        <div class="unit-info">
-          <div class="unit-badge">5<span style="font-size:2rem;"> BHK</span></div>
-          <span class="unit-badge-label">Five Bedroom Residence — 16th Floor (Larger)</span>
-          <div class="unit-areas">
-            <div class="unit-area-item"><span class="unit-area-num">3,966</span><span class="unit-area-unit">RERA Carpet Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">484</span><span class="unit-area-unit">Deck Sq.Ft.</span></div>
-            <div class="unit-area-item"><span class="unit-area-num">4,450</span><span class="unit-area-unit">Total Usable Sq.Ft.</span></div>
-          </div>
-          <div class="unit-room-grid">
-            <div class="unit-room"><div class="unit-room-name">Living &amp; Dining</div><div class="unit-room-dim">1,027 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Family TV Lounge</div><div class="unit-room-dim">322 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Master Suite</div><div class="unit-room-dim">320 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 02</div><div class="unit-room-dim">195 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 03</div><div class="unit-room-dim">205 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 04</div><div class="unit-room-dim">186 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Bedroom 05</div><div class="unit-room-dim">213 Sq.Ft.</div></div>
-            <div class="unit-room"><div class="unit-room-name">Society Office</div><div class="unit-room-dim">103 Sq.Ft.</div></div>
-          </div>
-          <p class="unit-extras">Unique to 16th floor: Society Office 103 Sq.Ft. + Store Room 100 Sq.Ft. Also: Master Walk-in Wardrobe, Master Bathroom 219 Sq.Ft., Kitchen 201 Sq.Ft., 2 Staff Rooms, Pantry, Utility, Deck, Refuge Area.</p>
-          <button class="btn-luxury-primary dark-btn btn-unit-request">Request Detailed Layout</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     AMENITIES — NAVY + SLIDER
-══════════════════════════════ -->
-<section id="amenities">
-  <div class="container-fluid px-0">
-
-    <!-- Image Slider -->
-    <!-- <div class="amenity-slider-wrap">
-      <div class="amenity-slider">
-
-        <div class="amenity-slide am-slide-1">
-          <div class="amenity-slide-bg">
-            <img src="images/swimmingpool.webp" alt="Rooftop pool"/>
-            <svg style="position:absolute;right:3%;top:50%;transform:translateY(-50%);opacity:0.08;width:320px;height:280px;" viewBox="0 0 320 280" fill="none">
-              <rect x="60" y="20" width="200" height="160" rx="80" stroke="#b8d4e8" stroke-width="2"/>
-              <rect x="80" y="40" width="160" height="120" rx="60" stroke="#8ab8d0" stroke-width="1"/>
-              <path d="M60 100 Q160 60 260 100" stroke="#c9a96e" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="amenity-slide-overlay"></div>
-          <div class="amenity-slide-content">
-            <div class="amenity-slide-eyebrow">Rooftop Amenity</div>
-            <div class="amenity-slide-icon">🏊</div>
-            <div class="amenity-slide-title">Rooftop Infinity Pool</div>
-            <p class="amenity-slide-desc">An infinity-edge pool perched above Mumbai's skyline — where the water meets the horizon of the Arabian Sea. Reserved exclusively for Cliff Tower residents.</p>
-          </div>
-          <div class="amenity-slide-num">01</div>
-        </div>
-
-        <div class="amenity-slide am-slide-2">
-          <div class="amenity-slide-bg">
-            <img src="images/fitness.jfif" alt="Fitness studio"/>
-            <svg style="position:absolute;right:5%;bottom:10%;opacity:0.07;width:280px;height:200px;" viewBox="0 0 280 200" fill="none">
-              <rect x="10" y="10" width="260" height="180" stroke="#b8d4e8" stroke-width="1"/>
-              <rect x="30" y="30" width="80" height="140" stroke="#b8d4e8" stroke-width="0.5"/>
-              <rect x="130" y="30" width="80" height="140" stroke="#b8d4e8" stroke-width="0.5"/>
-              <rect x="50" y="50" width="40" height="40" fill="rgba(184,212,232,0.1)"/>
-            </svg>
-          </div>
-          <div class="amenity-slide-overlay"></div>
-          <div class="amenity-slide-content">
-            <div class="amenity-slide-eyebrow">Wellness & Fitness</div>
-            <div class="amenity-slide-icon">💪</div>
-            <div class="amenity-slide-title">Exclusive Fitness Studio</div>
-            <p class="amenity-slide-desc">84 SQM (904 Sq.Ft.) of premium fitness space on the rooftop level. A wellness sanctuary designed for those who demand the finest, with panoramic city views.</p>
-          </div>
-          <div class="amenity-slide-num">02</div>
-        </div>
-
-        <div class="amenity-slide am-slide-3">
-          <div class="amenity-slide-bg">
-            <img src="images/laung.jfif" alt="Residents lounge"/>
-            <svg style="position:absolute;right:5%;top:20%;opacity:0.07;width:260px;height:200px;" viewBox="0 0 260 200" fill="none">
-              <path d="M20 160 Q80 100 140 120 Q200 140 240 80" stroke="#b8d4e8" stroke-width="2"/>
-              <circle cx="60" cy="130" r="20" stroke="#c9a96e" stroke-width="1"/>
-              <circle cx="180" cy="100" r="15" stroke="#c9a96e" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="amenity-slide-overlay"></div>
-          <div class="amenity-slide-content">
-            <div class="amenity-slide-eyebrow">Social Spaces</div>
-            <div class="amenity-slide-icon">🛋</div>
-            <div class="amenity-slide-title">Residents' Lounge</div>
-            <p class="amenity-slide-desc">112 SQM (1,205 Sq.Ft.) exclusive lounge designed as an intimate gathering space above the city. Complete with cocktail counter, alfresco seating and terrace garden.</p>
-          </div>
-          <div class="amenity-slide-num">03</div>
-        </div>
-
-        <div class="amenity-slide am-slide-4">
-          <div class="amenity-slide-bg">
-            <img src="images/landscapedgardens.webp" alt="Terrace garden"/>
-          </div>
-          <div class="amenity-slide-overlay"></div>
-          <div class="amenity-slide-content">
-            <div class="amenity-slide-eyebrow">Outdoor & Leisure</div>
-            <div class="amenity-slide-icon">🌿</div>
-            <div class="amenity-slide-title">Party Deck &amp; Terrace Garden</div>
-            <p class="amenity-slide-desc">A curated outdoor experience with alfresco seating, sunken seats, refreshment bar, kids' play area, and lush planting areas — all set against the panoramic backdrop of Bandra West.</p>
-          </div>
-          <div class="amenity-slide-num">04</div>
-        </div>
-
-        <div class="amenity-slide am-slide-5">
-          <div class="amenity-slide-bg">
-            <img src="images/security.webp" alt="Grand entrance"/>
-          </div>
-          <div class="amenity-slide-overlay"></div>
-          <div class="amenity-slide-content">
-            <div class="amenity-slide-eyebrow">Security & Arrival</div>
-            <div class="amenity-slide-icon">🏛</div>
-            <div class="amenity-slide-title">Grand Entrance Lobby</div>
-            <p class="amenity-slide-desc">A grand entrance arrival experience with cobblestone single-tone paving, drop-off sculpture, covered landscape area, and a controlled security cabin — private access befitting a curated address.</p>
-          </div>
-          <div class="amenity-slide-num">05</div>
-        </div>
-
-      </div>< /.amenity-slider -->
-
-      <!-- <div class="amenity-dots">
-        <div class="am-dot active"></div>
-        <div class="am-dot"></div>
-        <div class="am-dot"></div>
-        <div class="am-dot"></div>
-        <div class="am-dot"></div>
-      </div>
-      <div class="amenity-slider-controls">
-        <div class="am-ctrl am-prev"><i class="bi bi-arrow-left"></i></div>
-        <div class="am-ctrl am-next"><i class="bi bi-arrow-right"></i></div>
-      </div>
-    </div> --> 
-
-    <!-- Amenity Cards Grid -->
-    <div class="container" style="padding-bottom:5rem;">
-      <div class="text-center mb-4 reveal">
-        <span class="section-label">All Amenities</span>
-      </div>
-      <div class="amenity-cards reveal">
-        <div class="amenity-card"><div class="amenity-icon">🏊</div><div class="amenity-name">Rooftop Infinity Pool</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🌅</div><div class="amenity-name">Infinity Edge Deck</div></div>
-        <div class="amenity-card"><div class="amenity-icon">💪</div><div class="amenity-name">Fitness Studio</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🛋</div><div class="amenity-name">Residents Lounge</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🍹</div><div class="amenity-name">Refreshment Bar</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🎉</div><div class="amenity-name">Party Deck</div></div>
-        <div class="amenity-card"><div class="amenity-icon">☀️</div><div class="amenity-name">Alfresco Seating</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🛁</div><div class="amenity-name">Sunken Seating</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🌿</div><div class="amenity-name">Terrace Garden</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🧒</div><div class="amenity-name">Kids' Play Area</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🌺</div><div class="amenity-name">Planting Areas</div></div>
-        <div class="amenity-card"><div class="amenity-icon">🏛</div><div class="amenity-name">Grand Lobby</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════
-     HIGHLIGHTS — ICE PALE
-══════════════════════════════ -->
-<section id="highlights">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row g-5 align-items-center">
-      <div class="col-lg-6 reveal">
-        <span class="section-label dark">Why Cliff Tower</span>
-        <h2 class="section-title dark">Project<br><em>Highlights</em></h2>
-        <div class="section-divider dark"></div>
-        <p class="highlight-intro">Rustomjee Cliff Tower is not merely a residence. It is a statement — a meticulously edited asset for those who have seen it all and choose only the finest.</p>
-        <div class="highlight-item"><div class="highlight-num">01</div><div><div class="highlight-text">Upmarket Neighbourhood</div><div class="highlight-sub">Mount Mary, Bandra West — Mumbai's most coveted hilltop address</div></div></div>
-        <div class="highlight-item"><div class="highlight-num">02</div><div><div class="highlight-text">Unmatched Sea &amp; City Views</div><div class="highlight-sub">Permanent, unobstructed 270° views of the Arabian Sea &amp; Bandra-Worli Sea Link</div></div></div>
-        <div class="highlight-item"><div class="highlight-num">03</div><div><div class="highlight-text">Limited Ultra Luxury Residences</div><div class="highlight-sub">Boutique tower — only 2 homes per floor, curated for absolute privacy</div></div></div>
-        <div class="highlight-item"><div class="highlight-num">04</div><div><div class="highlight-text">Spacious 4 &amp; 5 Bed + Duplex Options</div><div class="highlight-sub">Generously proportioned from 2,723 to 4,450 Sq.Ft. usable area</div></div></div>
-        <div class="highlight-item"><div class="highlight-num">05</div><div><div class="highlight-text">World-Class Lifestyle Amenities</div><div class="highlight-sub">Rooftop infinity pool, lounge, fitness studio, terrace garden &amp; party deck</div></div></div>
-        <div class="highlight-item"><div class="highlight-num">06</div><div><div class="highlight-text">MahaRERA Approved Project</div><div class="highlight-sub">Registration No. P51800080156 · RERA Completion: October 2030</div></div></div>
-        <div class="mt-4">
-          <a href="#contact" class="btn-luxury-primary dark-btn">Begin Your Journey</a>
-        </div>
-      </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="highlight-img-frame">
-          <div class="highlight-img-inner">
-            <img src="images/gallery 1.webp" alt="Project highlight" class="highlight-main-img" />
-            <svg viewBox="0 0 380 500" fill="none" width="320" height="420">
-              <!-- Stylized tower elevation -->
-              <rect x="100" y="30" width="180" height="440" fill="rgba(164,200,224,0.15)" stroke="#a4c8e0" stroke-width="1.5"/>
-              <!-- Windows rows -->
-              <rect x="115" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="143" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="171" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="199" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="227" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="255" y="50" width="20" height="28" fill="rgba(164,200,224,0.3)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <!-- Repeat windows for multiple floors -->
-              <rect x="115" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="143" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="171" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="199" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="227" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="255" y="92" width="20" height="28" fill="rgba(164,200,224,0.25)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="115" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="143" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="171" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="199" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="227" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="255" y="134" width="20" height="28" fill="rgba(201,169,110,0.25)" stroke="#c9a96e" stroke-width="0.5"/>
-              <rect x="115" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="143" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="171" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="199" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="227" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <rect x="255" y="176" width="20" height="28" fill="rgba(164,200,224,0.2)" stroke="#a4c8e0" stroke-width="0.5"/>
-              <!-- Crown -->
-              <rect x="85" y="18" width="210" height="14" fill="#c9a96e" opacity="0.35"/>
-              <polygon points="190,2 110,18 270,18" fill="#c9a96e" opacity="0.25"/>
-              <!-- Ground -->
-              <rect x="70" y="465" width="240" height="5" fill="rgba(164,200,224,0.3)"/>
-              <!-- Tree silhouettes -->
-              <ellipse cx="65" cy="430" rx="28" ry="45" fill="rgba(164,200,224,0.12)"/>
-              <ellipse cx="315" cy="440" rx="22" ry="38" fill="rgba(164,200,224,0.12)"/>
-              <!-- Sea Link hint -->
-              <line x1="20" y1="320" x2="80" y2="320" stroke="#c9a96e" stroke-width="0.8" opacity="0.3"/>
-              <line x1="300" y1="330" x2="360" y2="330" stroke="#c9a96e" stroke-width="0.8" opacity="0.3"/>
-              <!-- Label -->
-              <text x="190" y="490" text-anchor="middle" fill="#a8813d" font-size="7" font-family="Jost,sans-serif" letter-spacing="3">CLIFF TOWER · MOUNT MARY</text>
-            </svg>
-          </div>
-          <div class="highlight-img-badge">
-            <span class="val">270°</span>
-            <span class="lbl">Unobstructed Sea Views</span>
-          </div>
+        <div id="heroSuccess" class="success-msg">
+          <i class="bi bi-check-circle" style="margin-right:0.4rem;"></i>Thank you! Our team will reach you within 24 hours.
         </div>
       </div>
     </div>
@@ -913,272 +156,630 @@
 </section>
 
 
-<!-- ══════════════════════════════
-     GALLERY
-══════════════════════════════ -->
-<section id="gallery">
-  <div class="container-fluid px-4" style="padding-top:7rem;padding-bottom:7rem;">
-    <div class="container mb-4">
-      <div class="row">
-        <div class="col-lg-6 reveal">
-          <span class="section-label">Visual Experience</span>
-          <h2 class="section-title">Gallery</h2>
-          <div class="section-divider"></div>
-        </div>
-      </div>
+<!-- ══════════════════════════════════
+  2. PROJECT HIGHLIGHTS
+══════════════════════════════════ -->
+<section id="highlights" class="sec" style="background:var(--bg1);">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Project Overview</span>
+      <h2 class="h2">An Address <em>Above It All</em></h2>
+      <div class="divider"></div>
+      <p class="body-text" style="max-width:600px;">A boutique landmark tower rises above Mount Mary — Mumbai's most coveted hilltop address. Just two homes per floor, crafted for those who have seen it all and choose only the finest.</p>
     </div>
-    <div class="gallery-grid reveal">
-      <div class="gallery-item gallery-item-1">
-        <div class="gallery-img gallery-img-1" data-label="Tower Exterior">
-          <img src="images/gallery 1.webp" alt="Tower Exterior" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="200" height="340" viewBox="0 0 200 340" fill="none"><rect x="50" y="10" width="100" height="320" stroke="#b8d4e8" stroke-width="1.2"/><rect x="60" y="25" width="14" height="18" stroke="#c9a96e" stroke-width="0.5"/><rect x="80" y="25" width="14" height="18" stroke="#c9a96e" stroke-width="0.5"/><rect x="100" y="25" width="14" height="18" stroke="#c9a96e" stroke-width="0.5"/><rect x="120" y="25" width="14" height="18" stroke="#c9a96e" stroke-width="0.5"/><rect x="60" y="55" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="80" y="55" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="100" y="55" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="120" y="55" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="60" y="85" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="80" y="85" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="100" y="85" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="120" y="85" width="14" height="18" stroke="#b8d4e8" stroke-width="0.5"/><rect x="40" y="3" width="120" height="10" fill="#c9a96e" opacity="0.3"/><polygon points="100,0 55,3 145,3" fill="#c9a96e" opacity="0.25"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-2">
-        <div class="gallery-img gallery-img-2" data-label="Arabian Sea View">
-          <img src="images/gallery 2.webp" alt="Arabian Sea View" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="160" height="100" viewBox="0 0 160 100" fill="none"><path d="M0 55 Q40 40 80 48 Q120 56 160 42" stroke="#b8d4e8" stroke-width="2"/><path d="M0 70 Q40 60 80 65 Q120 70 160 58" stroke="#8ab8d0" stroke-width="1.5"/><line x1="40" y1="25" x2="58" y2="55" stroke="#c9a96e" stroke-width="1.2"/><line x1="60" y1="15" x2="78" y2="55" stroke="#c9a96e" stroke-width="1.2"/><line x1="80" y1="25" x2="98" y2="55" stroke="#c9a96e" stroke-width="1.2"/><line x1="40" y1="18" x2="100" y2="18" stroke="#c9a96e" stroke-width="1.8"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-3">
-        <div class="gallery-img gallery-img-3" data-label="Rooftop Pool">
-          <img src="images/gallery 3.webp" alt="Rooftop Pool" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="160" height="80" viewBox="0 0 160 80" fill="none"><rect x="15" y="15" width="130" height="50" rx="25" stroke="#b8d4e8" stroke-width="1.5"/><rect x="25" y="23" width="110" height="34" rx="17" stroke="#8ab8d0" stroke-width="0.6" fill="rgba(184,212,232,0.06)"/><path d="M15 38 Q40 34 65 38 Q90 42 115 38 Q140 34 145 38" stroke="#b8d4e8" stroke-width="0.9" stroke-dasharray="3,2"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-4">
-        <div class="gallery-img gallery-img-4" data-label="Living Room">
-          <img src="images/gallery 4.webp" alt="Living Room" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none"><rect x="8" y="8" width="104" height="64" stroke="#b8d4e8" stroke-width="1"/><rect x="18" y="40" width="54" height="24" rx="2" stroke="#c9a96e" stroke-width="0.8"/><rect x="82" y="28" width="22" height="36" rx="2" stroke="#b8d4e8" stroke-width="0.5"/><rect x="28" y="14" width="64" height="22" rx="1" stroke="#b8d4e8" stroke-width="0.5"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-5">
-        <div class="gallery-img gallery-img-5" data-label="Grand Lobby">
-          <img src="images/gallery%203.webp" alt="Grand Lobby" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none"><path d="M18 72 L18 18 L102 18 L102 72" stroke="#b8d4e8" stroke-width="1"/><path d="M38 72 L38 34 Q60 24 82 34 L82 72" stroke="#c9a96e" stroke-width="0.9"/><rect x="54" y="50" width="12" height="22" stroke="#b8d4e8" stroke-width="0.5"/><path d="M0 72 L120 72" stroke="#b8d4e8" stroke-width="0.6"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-      <div class="gallery-item gallery-item-6">
-        <div class="gallery-img gallery-img-6" data-label="Mount Mary">
-          <img src="images/gallery%204.webp" alt="Mount Mary" class="gallery-img-el" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.2;">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none"><path d="M8 72 Q28 38 50 48 Q72 58 92 28 L112 72 Z" stroke="#b8d4e8" stroke-width="1" fill="rgba(184,212,232,0.06)"/><circle cx="60" cy="22" r="7" stroke="#c9a96e" stroke-width="1"/><path d="M60 29 L60 45" stroke="#c9a96e" stroke-width="1"/></svg>
-          </div>
-          <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-3"><p style="font-size:0.62rem;letter-spacing:0.3em;color:var(--silver-dark);text-transform:uppercase;">Artist's Impressions · Indicative Only</p></div>
-  </div>
-</section>
 
-
-<!-- ══════════════════════════════
-     LOCATION — ICE PALE + SIDE IMAGE
-══════════════════════════════ -->
-<section id="location">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row mb-3">
-      <div class="col-lg-6 reveal">
-        <span class="section-label dark">Location</span>
-        <h2 class="section-title dark">Seamlessly Connected,<br><em>Serenely Apart</em></h2>
-        <div class="section-divider dark"></div>
-      </div>
+    <div class="hl-grid reveal">
+      <div class="hl-item"><span class="hl-n">0.502</span><span class="hl-l">Acres<br>Prime Land</span></div>
+      <div class="hl-item"><span class="hl-n">20</span><span class="hl-l">Habitable<br>Floors</span></div>
+      <div class="hl-item"><span class="hl-n">270°</span><span class="hl-l">Sea Views<br>Unobstructed</span></div>
+      <div class="hl-item"><span class="hl-n">2</span><span class="hl-l">Residences<br>Per Floor</span></div>
     </div>
-    <div class="location-layout reveal">
-      <!-- Map -->
-      <div class="loc-map-col">
-        <div class="loc-map-badge"><i class="bi bi-geo-alt-fill me-1"></i> Rustomjee Cliff Tower</div>
-        <iframe src="https://maps.google.com/maps?q=Rustomjee+Crescent+Sales+Gallery+Pali+Hill+Bandra+West+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" title="Rustomjee Cliff Tower Map"></iframe>
+
+    <div class="info-cards reveal">
+      <div class="info-card">
+        <span class="info-icon">📍</span>
+        <span class="info-lbl">Location</span>
+        <div class="info-val">Mount Mary<br>Bandra West</div>
+        <div class="info-sub">Mumbai · 400050</div>
       </div>
-      <!-- Side column with image + distances -->
-      <div class="loc-side">
-        <!-- Neighbourhood image (SVG art) -->
-        <div class="loc-img">
-          <img src="images/security.webp" alt="Location map" class="loc-main-img" />
-          <svg viewBox="0 0 320 240" fill="none" width="260" height="195">
-            <!-- Mount Mary Hill landscape art -->
-            <path d="M0 200 Q60 140 120 160 Q180 180 240 120 Q290 80 320 100 L320 240 L0 240 Z" fill="rgba(164,200,224,0.18)" stroke="none"/>
-            <path d="M0 220 Q80 190 160 200 Q240 210 320 195 L320 240 L0 240 Z" fill="rgba(164,200,224,0.25)"/>
-            <!-- Cliff Tower on hill -->
-            <rect x="200" y="90" width="40" height="110" fill="rgba(164,200,224,0.35)" stroke="#a4c8e0" stroke-width="1"/>
-            <rect x="204" y="98" width="6" height="8" fill="rgba(201,169,110,0.4)"/>
-            <rect x="215" y="98" width="6" height="8" fill="rgba(201,169,110,0.4)"/>
-            <rect x="226" y="98" width="6" height="8" fill="rgba(201,169,110,0.4)"/>
-            <rect x="204" y="115" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="215" y="115" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="226" y="115" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="204" y="132" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="215" y="132" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="226" y="132" width="6" height="8" fill="rgba(164,200,224,0.5)"/>
-            <rect x="192" y="84" width="56" height="8" fill="#c9a96e" opacity="0.35"/>
-            <polygon points="220,74 198,84 242,84" fill="#c9a96e" opacity="0.25"/>
-            <!-- Trees -->
-            <ellipse cx="170" cy="155" rx="18" ry="30" fill="rgba(164,200,224,0.2)"/>
-            <ellipse cx="260" cy="170" rx="14" ry="24" fill="rgba(164,200,224,0.2)"/>
-            <ellipse cx="145" cy="165" rx="12" ry="20" fill="rgba(164,200,224,0.15)"/>
-            <!-- Sea Link -->
-            <line x1="20" y1="150" x2="100" y2="150" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
-            <line x1="30" y1="150" x2="50" y2="120" stroke="#c9a96e" stroke-width="0.8" opacity="0.25"/>
-            <line x1="60" y1="150" x2="80" y2="120" stroke="#c9a96e" stroke-width="0.8" opacity="0.25"/>
-            <line x1="30" y1="120" x2="80" y2="120" stroke="#c9a96e" stroke-width="0.8" opacity="0.2"/>
-            <!-- Water -->
-            <path d="M0 180 Q40 175 80 178 Q120 181 160 176" stroke="rgba(164,200,224,0.4)" stroke-width="1" fill="none"/>
-          </svg>
-          <div class="loc-img-caption">Mount Mary · Bandra West · Mumbai</div>
-        </div>
-        <!-- Distances -->
-        <div class="loc-distances">
-          <span class="section-label dark" style="font-size:0.57rem;">Distance Guide</span>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> Mount Mary Basilica</span><span class="dist-km">150 m</span></div>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> Bandstand Promenade</span><span class="dist-km">450 m</span></div>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> Bandra Worli Sea Link</span><span class="dist-km">3 km</span></div>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> Western Express Highway</span><span class="dist-km">2.5 km</span></div>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> Domestic Airport</span><span class="dist-km">8.7 km</span></div>
-          <div class="dist-item"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold-dark);font-size:0.7rem;"></i> International Airport</span><span class="dist-km">11.9 km</span></div>
-        </div>
-        <div class="loc-cta-block">
-          <div style="font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.4rem;">Sales Gallery</div>
-          <div style="font-size:0.78rem;color:var(--mid-text);line-height:1.7;margin-bottom:0.9rem;">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West, Mumbai</div>
-          <a href="https://maps.app.goo.gl/3S3t6NNRZThPzmrr5" target="_blank" rel="noopener" class="btn-small dark"><i class="bi bi-map me-1"></i>Get Directions</a>
-        </div>
+      <div class="info-card">
+        <span class="info-icon">🏗️</span>
+        <span class="info-lbl">Project Type</span>
+        <div class="info-val">Redevelopment<br>Ultra Luxury</div>
+        <div class="info-sub">4B + G + 5 Podium + Rooftop</div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">📏</span>
+        <span class="info-lbl">Ceiling Height</span>
+        <div class="info-val">11 Feet 9 In.</div>
+        <div class="info-sub">Slab-to-Slab</div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">🅿️</span>
+        <span class="info-lbl">Parking</span>
+        <div class="info-val">4 Basement<br>Levels</div>
+        <div class="info-sub">Conventional Car Parking</div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════
-     POSSESSION BANNER
-══════════════════════════════ -->
+<!-- ══════════════════════════════════
+  3. CONFIGURATION + PRICING
+══════════════════════════════════ -->
+<section id="pricing" class="sec" style="background:var(--bg0);">
+  <div class="wrap">
+    <div class="tc reveal">
+      <span class="eyebrow">Available Inventory</span>
+      <h2 class="h2">Curated <em>Residences</em></h2>
+      <div class="divider cx"></div>
+      <p class="body-text" style="max-width:520px;margin:0 auto;">All-inclusive pricing · Limited ultra-luxury residences · MahaRERA Approved</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <!-- 4 BHK -->
+      <div class="pcard">
+        <span class="cfg-pill">4 BHK Configuration</span>
+        <div class="ptype">4 Bedroom<br>Residence</div>
+        <div class="pcarpet">RERA Carpet · 2,723.29 Sq. Ft.</div>
+        <div class="price-box">
+          <span class="price-amount">₹ 38.00 Cr</span>
+          <span class="price-note">All Inclusive</span>
+        </div>
+        <div class="price-label">Starting Price · Onwards</div>
+        <ul class="pfeatures">
+          <li>Master Suite + 3 Bedrooms</li>
+          <li>Living &amp; Entertainment Lounge — 576 Sq. Ft.</li>
+          <li>Dedicated Deck — 144–210 Sq. Ft.</li>
+          <li>Kitchen — 149 Sq. Ft.</li>
+          <li>Staff Room + Utility</li>
+          <li>Available: Floors 3rd–17th</li>
+        </ul>
+        <a href="#contact" class="btn-enquire"><i class="bi bi-arrow-right-circle"></i> Request Consultation</a>
+      </div>
+
+      <!-- 5 BHK -->
+      <div class="pcard featured">
+        <span class="cfg-pill">5 BHK Configuration</span>
+        <div class="ptype">5 Bedroom<br>Residence</div>
+        <div class="pcarpet">RERA Carpet · 4,355.22 Sq. Ft.</div>
+        <div class="price-box">
+          <span class="price-amount">₹ 61.50 Cr</span>
+          <span class="price-note">All Inclusive</span>
+        </div>
+        <div class="price-label">Starting Price · Onwards</div>
+        <ul class="pfeatures">
+          <li>Master Suite + 4 Bedrooms</li>
+          <li>Living &amp; Dining — 1,027 Sq. Ft.</li>
+          <li>Family TV Lounge — 322 Sq. Ft.</li>
+          <li>Deck — 308 Sq. Ft.</li>
+          <li>2 Staff Rooms + Pantry + Utility</li>
+          <li>Refuge Floors 2nd, 9th &amp; 16th</li>
+        </ul>
+        <a href="#contact" class="btn-enquire"><i class="bi bi-arrow-right-circle"></i> Request Consultation</a>
+      </div>
+    </div>
+
+    <div class="pay-strip reveal">
+      <div class="pay-item"><div class="pay-lbl">Payment Plan</div><div class="pay-val">CLPP</div></div>
+      <div class="pay-item"><div class="pay-lbl">Completion</div><div class="pay-val">October 2030</div></div>
+      <div class="pay-item"><div class="pay-lbl">MahaRERA</div><div class="pay-val">P51800080156</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+  4. AMENITIES — IMAGE SLIDER
+══════════════════════════════════ -->
+<section id="amenities" class="sec" style="background:var(--bg1);">
+  <div class="wrap">
+    <div class="tc reveal">
+      <span class="eyebrow">World-Class Amenities</span>
+      <h2 class="h2">Exclusive <em>Privileges</em></h2>
+      <div class="divider cx"></div>
+      <p class="body-text" style="max-width:520px;margin:0 auto;">Every detail curated for those who settle for nothing less than extraordinary.</p>
+    </div>
+
+    <div class="am-slider-wrap reveal">
+      <div class="am-slider" id="amSlider">
+
+        <!-- Amenity slides with Unsplash images -->
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/ROOF LEVEL PAN.jpg" alt="Rooftop Infinity Pool" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🏊</span><span class="am-name">Rooftop Infinity Pool</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/INFINITY EDGE DECL.jfif" alt="Infinity Edge Deck" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🌅</span><span class="am-name">Infinity Edge Deck</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/FITNESS STUDIO.jfif" alt="Fitness Studio" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">💪</span><span class="am-name">Fitness Studio</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/RESIDENCES LOUNGE.jfif" alt="Residents Lounge" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🛋</span><span class="am-name">Residents Lounge</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/REFRESHMENT BAR.jfif" alt="Refreshment Bar" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🍹</span><span class="am-name">Refreshment Bar</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/PARTY DECK.jfif" alt="Party Deck" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🎉</span><span class="am-name">Party Deck</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/ALFERISCO SETTING.jfif" alt="Alfresco Seating" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">☀️</span><span class="am-name">Alfresco Seating</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/TERRACE GARDEN.jfif" alt="Terrace Garden" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🌿</span><span class="am-name">Terrace Garden</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/KIDS PLAY AREA.jfif" alt="Kids Play Area" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🧒</span><span class="am-name">Kids' Play Area</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/SUNKEN SETTING.jfif" alt="Sunken Seating" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🛁</span><span class="am-name">Sunken Seating</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/GRAND LOBBY.jfif" alt="Grand Lobby" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🏛</span><span class="am-name">Grand Lobby</span></div>
+        </div>
+        <div class="am-slide">
+          <img class="am-slide-img" src="images/TERRACE GARDEN.jfif" alt="Planting Areas" loading="lazy"/>
+          <div class="am-slide-body"><span class="am-icon">🌺</span><span class="am-name">Planting Areas</span></div>
+        </div>
+
+      </div>
+
+      <div class="am-controls">
+        <div class="am-dots" id="amDots"></div>
+        <div class="am-nav">
+          <button class="am-btn" id="amPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+          <button class="am-btn" id="amNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+  5. LOCATION + MAP
+══════════════════════════════════ -->
+<section id="location" class="sec" style="background:var(--bg0);">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Location</span>
+      <h2 class="h2">Seamlessly Connected,<br><em>Serenely Apart</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="loc-grid reveal">
+      <div class="loc-map-wrap">
+        <div class="map-badge"><i class="bi bi-geo-alt-fill" style="margin-right:0.3rem;"></i>Rustomjee Cliff Tower</div>
+        <iframe src="https://maps.google.com/maps?q=Rustomjee+Crescent+Sales+Gallery+Pali+Hill+Bandra+West+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" title="Location Map"></iframe>
+      </div>
+      <div class="loc-info">
+        <span class="eyebrow">Distance Guide</span>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> Mount Mary Basilica</span><span class="dist-km">150 m</span></div>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> Bandstand Promenade</span><span class="dist-km">450 m</span></div>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> Bandra-Worli Sea Link</span><span class="dist-km">3 km</span></div>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> Western Express Hwy</span><span class="dist-km">2.5 km</span></div>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> Domestic Airport</span><span class="dist-km">8.7 km</span></div>
+        <div class="dist-row"><span class="dist-place"><i class="bi bi-geo-alt" style="color:var(--gold);"></i> International Airport</span><span class="dist-km">11.9 km</span></div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--bdr2);">
+          <span style="font-size:0.55rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Sales Gallery</span>
+          <p style="font-size:0.82rem;color:var(--silver);line-height:1.8;margin-bottom:1rem;">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West, Mumbai</p>
+          <a href="https://maps.app.goo.gl/3S3t6NNRZThPzmrr5" target="_blank" rel="noopener" class="loc-btn">
+            <i class="bi bi-map"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="sec" style="background:var(--bg1);">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(1rem,3vw,2rem);">
+    <div class="wrap reveal" style="padding-left:0;padding-right:0;margin-bottom:2rem;">
+      <span class="eyebrow">Visual Experience</span>
+      <h2 class="h2">Gallery</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gi gi-1"><img src="images/gallery 1.webp" alt="Tower Exterior"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+      <div class="gi gi-2"><img src="images/gallery 2.webp" alt="Sea View"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+      <div class="gi gi-3"><img src="images/gallery 3.webp" alt="Pool"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+      <div class="gi gi-4"><img src="images/gallery 4.webp" alt="Living Room"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+      <div class="gi gi-5"><img src="images/gallery 3.webp" alt="Lobby"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+      <div class="gi gi-6"><img src="images/gallery 4.webp" alt="Views"/><div class="gi-ov"><div class="gi-plus"><i class="bi bi-zoom-in"></i></div></div></div>
+    </div>
+    <p style="font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:1rem;">Artist's Impressions · Indicative Only</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+  6. FLOOR PLANS — Locked with CTA
+══════════════════════════════════ -->
+<section id="floorplans" class="sec" style="background:var(--bg0);">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;" class="reveal">
+      <div>
+        <span class="eyebrow">Floor Plans</span>
+        <h2 class="h2">Architectural <em>Excellence</em></h2>
+        <div class="divider"></div>
+        <p class="body-text">Two residences per floor — meticulously planned for maximum privacy, light, and unobstructed views.</p>
+      </div>
+      <a href="#contact" class="btn-enquire" style="white-space:nowrap;align-self:flex-end;">
+        <i class="bi bi-download"></i> Download Brochure
+      </a>
+    </div>
+
+    <div class="fp-grid reveal">
+      <div class="fpcard">
+        <div class="fp-thumb">
+          <img src="images/TYPICAL UNIT PLAN.jpg" alt="4BHK plan"/>
+          <div class="fp-lock"><i class="bi bi-lock-fill fp-lock-icon"></i><span class="fp-lock-txt">Floor Plan Locked</span><a href="#contact" class="btn-getplan">Get Floor Plan</a></div>
+        </div>
+        <div class="fp-body">
+          <div class="fp-name">4 BHK — Typical Floor</div>
+          <div class="fp-floors">3rd–8th · 10th–15th · 17th Floors</div>
+          <div class="fp-specs">
+            <div class="fp-spec"><strong>2,464.96</strong>RERA Carpet Sq.Ft.</div>
+            <div class="fp-spec"><strong>258.34</strong>Deck Sq.Ft.</div>
+            <div class="fp-spec"><strong>2,723.29</strong>Total Usable Sq.Ft.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fpcard">
+        <div class="fp-thumb">
+          <img src="images/REFUGE FLOOR PLAN.jpg" alt="5BHK plan"/>
+          <div class="fp-lock"><i class="bi bi-lock-fill fp-lock-icon"></i><span class="fp-lock-txt">Floor Plan Locked</span><a href="#contact" class="btn-getplan">Get Floor Plan</a></div>
+        </div>
+        <div class="fp-body">
+          <div class="fp-name">5 BHK — Refuge Floor</div>
+          <div class="fp-floors">2nd &amp; 9th Floor</div>
+          <div class="fp-specs">
+            <div class="fp-spec"><strong>3,870.84</strong>RERA Carpet Sq.Ft.</div>
+            <div class="fp-spec"><strong>484.38</strong>Deck Sq.Ft.</div>
+            <div class="fp-spec"><strong>4,355.22</strong>Total Usable Sq.Ft.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fpcard">
+        <div class="fp-thumb">
+          <img src="images/1ST FLOOR UNIT PLAN.jpg" alt="1st floor plan"/>
+          <div class="fp-lock"><i class="bi bi-lock-fill fp-lock-icon"></i><span class="fp-lock-txt">Floor Plan Locked</span><a href="#contact" class="btn-getplan">Get Floor Plan</a></div>
+        </div>
+        <div class="fp-body">
+          <div class="fp-name">4 BHK — 1st Floor</div>
+          <div class="fp-floors">Ground + 1 · Flat No. 1</div>
+          <div class="fp-specs">
+            <div class="fp-spec"><strong>2,464.96</strong>RERA Carpet Sq.Ft.</div>
+            <div class="fp-spec"><strong>336.91</strong>Deck Sq.Ft.</div>
+            <div class="fp-spec"><strong>2,801.87</strong>Total Usable Sq.Ft.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fpcard">
+        <div class="fp-thumb">
+          <img src="images/REFUGE FLOOR PLAN 16TH FLOOR.jpg" alt="16th floor plan"/>
+          <div class="fp-lock"><i class="bi bi-lock-fill fp-lock-icon"></i><span class="fp-lock-txt">Floor Plan Locked</span><a href="#contact" class="btn-getplan">Get Floor Plan</a></div>
+        </div>
+        <div class="fp-body">
+          <div class="fp-name">5 BHK — 16th Floor</div>
+          <div class="fp-floors">Larger · With Society Office</div>
+          <div class="fp-specs">
+            <div class="fp-spec"><strong>3,966.53</strong>RERA Carpet Sq.Ft.</div>
+            <div class="fp-spec"><strong>484.38</strong>Deck Sq.Ft.</div>
+            <div class="fp-spec"><strong>4,450.91</strong>Total Usable Sq.Ft.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.65rem;color:var(--muted);text-align:center;margin-top:1.5rem;padding:1rem;border:1px solid var(--bdr2);border-radius:6px;">
+      <i class="bi bi-info-circle" style="color:var(--gold);margin-right:0.4rem;"></i>Plans are indicative. Room dimensions per RERA. Minor variations (±3%) may occur.
+    </p>
+  </div>
+</section>
+
+<!-- UNIT PLAN -->
+<section id="unitplans" class="unit-section">
+  <div class="wrap">
+    <div class="tc reveal">
+      <span class="eyebrow">Unit Plans</span>
+      <h2 class="h2">Detailed <em>Configurations</em></h2>
+      <div class="divider cx"></div>
+      <p class="body-text" style="max-width:600px; margin:0 auto;">Generously proportioned residences with exceptional room-to-room flow. Every inch designed for gracious living.</p>
+    </div>
+
+    <div class="unit-grid reveal">
+      <!-- 4 BHK 1st Floor -->
+      <div class="unit-card">
+        <div class="unit-image">
+          <span class="unit-badge">4 BHK</span>
+          <img src="images/1ST FLOOR UNIT PLAN.jpg" alt="4 BHK 1st Floor">
+        </div>
+        <div class="unit-content">
+          <h4>4 Bedroom</h4>
+          <div class="unit-floors">1st Floor · Flat No. 1</div>
+          <div class="unit-dim">
+            <div class="unit-dim-item"><span class="unit-dim-num">2,464.96</span><span class="unit-dim-label">Carpet</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">336.91</span><span class="unit-dim-label">Deck</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">2,801.87</span><span class="unit-dim-label">Usable</span></div>
+          </div>
+          <table class="room-table">
+            <tr><td>Living & Entertainment Lounge</td><td>576 sq.ft.</td></tr>
+            <tr><td>Master Suite</td><td>192 sq.ft.</td></tr>
+            <tr><td>Bedroom 2/3/4</td><td>160/158/214 sq.ft.</td></tr>
+            <tr><td>Kitchen + Utility</td><td>150 + 44 sq.ft.</td></tr>
+            <tr><td>Staff Room + Bath</td><td>30 + 16 sq.ft.</td></tr>
+            <tr><td>Deck</td><td>336.91 sq.ft.</td></tr>
+          </table>
+          <div class="unit-note">*Dimensions average. <a href="#contact">Request detailed layout</a>.</div>
+        </div>
+      </div>
+
+      <!-- 4 BHK Typical -->
+      <div class="unit-card">
+        <div class="unit-image">
+          <span class="unit-badge">4 BHK</span>
+          <img src="images/TYPICAL UNIT PLAN.jpg" alt="4 BHK Typical">
+        </div>
+        <div class="unit-content">
+          <h4>4 Bedroom</h4>
+          <div class="unit-floors">Typical Floors (3rd–8th, 10th–15th, 17th)</div>
+          <div class="unit-dim">
+            <div class="unit-dim-item"><span class="unit-dim-num">2,464.96</span><span class="unit-dim-label">Carpet</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">258.34</span><span class="unit-dim-label">Deck</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">2,723.29</span><span class="unit-dim-label">Usable</span></div>
+          </div>
+          <table class="room-table">
+            <tr><td>Living & Entertainment Lounge</td><td>576 sq.ft.</td></tr>
+            <tr><td>Dining Lounge</td><td>292 sq.ft.</td></tr>
+            <tr><td>Master Suite</td><td>192 sq.ft.</td></tr>
+            <tr><td>Bedroom 2/3/4</td><td>160/158/214 sq.ft.</td></tr>
+            <tr><td>Kitchen</td><td>150 sq.ft.</td></tr>
+            <tr><td>Staff Room + Bath</td><td>30 + 16 sq.ft.</td></tr>
+          </table>
+          <div class="unit-note">*Dimensions average. <a href="#contact">Request detailed layout</a>.</div>
+        </div>
+      </div>
+
+      <!-- 5 BHK 2nd & 9th Floor -->
+      <div class="unit-card">
+        <div class="unit-image">
+          <span class="unit-badge">5 BHK</span>
+          <img src="images/REFUGE UNIT PLAN.jpg" alt="5 BHK Refuge">
+        </div>
+        <div class="unit-content">
+          <h4>5 Bedroom</h4>
+          <div class="unit-floors">2nd & 9th Floor (Refuge)</div>
+          <div class="unit-dim">
+            <div class="unit-dim-item"><span class="unit-dim-num">3,870.84</span><span class="unit-dim-label">Carpet</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">484.38</span><span class="unit-dim-label">Deck</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">4,355.22</span><span class="unit-dim-label">Usable</span></div>
+          </div>
+          <table class="room-table">
+            <tr><td>Living & Dining</td><td>1,027 sq.ft.</td></tr>
+            <tr><td>Family TV Lounge</td><td>322 sq.ft.</td></tr>
+            <tr><td>Master Suite</td><td>320 sq.ft.</td></tr>
+            <tr><td>Bedrooms 2–5</td><td>195–213 sq.ft.</td></tr>
+            <tr><td>Kitchen</td><td>226 sq.ft.</td></tr>
+            <tr><td>2 Staff Rooms + Pantry</td><td>Included</td></tr>
+          </table>
+          <div class="unit-note">*Dimensions average. <a href="#contact">Request detailed layout</a>.</div>
+        </div>
+      </div>
+
+      <!-- 5 BHK 16th Floor -->
+      <div class="unit-card">
+        <div class="unit-image">
+          <span class="unit-badge">5 BHK</span>
+          <img src="images/REFUGE UNIT 16TH PLAN.jpg" alt="5 BHK 16th">
+        </div>
+        <div class="unit-content">
+          <h4>5 Bedroom</h4>
+          <div class="unit-floors">16th Floor (Larger + Society Office)</div>
+          <div class="unit-dim">
+            <div class="unit-dim-item"><span class="unit-dim-num">3,966.53</span><span class="unit-dim-label">Carpet</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">484.38</span><span class="unit-dim-label">Deck</span></div>
+            <div class="unit-dim-item"><span class="unit-dim-num">4,450.91</span><span class="unit-dim-label">Usable</span></div>
+          </div>
+          <table class="room-table">
+            <tr><td>Living & Dining</td><td>1,027 sq.ft.</td></tr>
+            <tr><td>Family TV Lounge</td><td>322 sq.ft.</td></tr>
+            <tr><td>Master Suite</td><td>320 sq.ft.</td></tr>
+            <tr><td>Society Office</td><td>103 sq.ft.</td></tr>
+            <tr><td>Store Room</td><td>100 sq.ft.</td></tr>
+            <tr><td>Bedrooms 2–5</td><td>195–213 sq.ft.</td></tr>
+          </table>
+          <div class="unit-note">*Dimensions average. <a href="#contact">Request detailed layout</a>.</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.6rem;color:var(--muted);text-align:center;margin-top:2rem;">Room dimensions are average and may vary ±3% as per finishing tolerances.</p>
+  </div>
+</section>
+
+<!-- POSSESSION BANNER -->
 <section id="possession">
-  <div class="possession-content">
-    <span class="possession-label-text">RERA Completion Timeline</span>
-    <div class="possession-year">2030</div>
-    <span class="possession-label-text" style="margin-top:0.3rem;">October · Project Completion</span>
-    <div class="possession-badges">
-      <div class="possession-badge">MahaRERA<strong>P51800080156</strong></div>
-      <div class="possession-badge">Current Stage<strong>Excavation</strong></div>
-      <div class="possession-badge">Payment Plan<strong>CLPP</strong></div>
+  <div class="wrap" style="text-align:center;">
+    <span style="font-size:0.6rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.5rem;">RERA Completion Timeline</span>
+    <div class="poss-year">2030</div>
+    <span style="font-size:0.6rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--muted);display:block;margin-top:0.3rem;">October · Project Completion</span>
+    <div class="poss-pills">
+      <div class="poss-pill"><span>MahaRERA</span><strong>P51800080156</strong></div>
+      <div class="poss-pill"><span>Current Stage</span><strong>Excavation</strong></div>
+      <div class="poss-pill"><span>Payment Plan</span><strong>CLPP</strong></div>
     </div>
-    <div class="possession-note" style="margin-top:1rem;">As registered with MahaRERA · maharera.mahaonline.gov.in</div>
+    <p style="font-size:0.6rem;letter-spacing:0.2em;color:var(--muted);margin-top:1.2rem;">As registered with MahaRERA · maharera.mahaonline.gov.in</p>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════
-     CONTACT — WHITE/ICE
-══════════════════════════════ -->
-<section id="contact">
-  <div class="container" style="padding:7rem 0;">
-    <div class="row">
-      <div class="col-lg-5 reveal" style="padding-right:4rem;">
-        <span class="section-label dark">Get in Touch</span>
-        
-        <div class="section-divider dark"></div>
-        <p class="contact-intro">Our Portfolio Managers are available to guide you through the residences, pricing, and customisation options. All enquiries are treated with the utmost discretion.</p>
-        <div class="contact-info-item"><span class="contact-info-label">Sales Gallery</span><div class="contact-info-value">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West, Mumbai</div></div>
-        <div class="contact-info-item"><span class="contact-info-label">Project Address</span><div class="contact-info-value">Rustomjee Cliff Tower<br>Mount Mary Road, Bandra West<br>Mumbai — 400 050</div></div>
-        <div class="contact-info-item"><span class="contact-info-label">MahaRERA</span><div class="contact-info-value">P51800080156</div></div>
-        <div class="contact-info-item"><span class="contact-info-label">Portfolio Manager</span><div class="contact-info-value">Utsav Chitroda</div></div>
-      </div>
-      <div class="col-lg-7 reveal reveal-delay-2">
-        <div class="luxury-form">
-          <div style="font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--muted-text);margin-bottom:2rem;">Quick Enquiry</div>
-          <form id="enquiryForm" novalidate>
-            <div class="row g-3">
-              <div class="col-12"><label class="form-label" for="name">Full Name *</label><input type="text" id="name" class="form-control" placeholder="Your full name" required/></div>
-              <div class="col-12"><label class="form-label" for="mobile">Mobile Number *</label><input type="tel" id="mobile" class="form-control" placeholder="10-digit mobile" maxlength="10" required/></div>
-              <div class="col-12"><label class="form-label" for="resType">Interested In (Optional)</label><select id="resType" class="form-select"><option value="">— Select —</option><option value="4bhk">4 BHK — From ₹ 38.00 Cr</option><option value="5bhk">5 BHK — From ₹ 61.50 Cr</option><option value="info">Project Information</option></select></div>
-              <div class="col-12">
-                <button type="submit" class="btn-submit-luxury">Send Enquiry</button>
-              </div>
-              <div class="col-12">
-                <div class="form-success" id="formSuccess"><i class="bi bi-check-circle me-2"></i>Thank you! Our team will contact you within 24 hours.</div>
-                <div class="form-error" id="formError"></div>
-              </div>
-            </div>
-          </form>
-          <div style="font-size:0.65rem;color:var(--muted-text);margin-top:1rem;line-height:1.6;"><i class="bi bi-lock-fill me-1" style="color:var(--gold);"></i> Your information is secure. We respect your privacy.</div>
+<!-- ══════════════════════════════════
+  7. ABOUT DEVELOPER + RERA
+══════════════════════════════════ -->
+<section id="developer" class="sec" style="background:var(--bg2);">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">About the Developer</span>
+      <h2 class="h2">Rustomjee <em>Group</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="dev-grid reveal">
+      <div>
+        <p class="body-text" style="margin-bottom:1.2rem;">Rustomjee is one of Mumbai's most respected luxury real estate developers, with a legacy spanning over three decades of delivering iconic residential and commercial projects. Known for their commitment to craftsmanship, timely delivery, and creating benchmark properties across Mumbai's most coveted addresses.</p>
+        <p class="body-text" style="margin-bottom:2rem;">Cliff Tower represents the pinnacle of Rustomjee's vision — an ultra-luxury redevelopment atop iconic Mount Mary hill, curated for those who seek the extraordinary.</p>
+        <div class="rera-badge">
+          <i class="bi bi-shield-check" style="color:var(--gold);font-size:1.3rem;"></i>
+          <div>
+            <div class="rera-badge-label">MahaRERA Approved Project</div>
+            <div class="rera-badge-num">P51800080156</div>
+          </div>
         </div>
       </div>
+      <div class="dev-cards">
+        <div class="dev-card"><span class="dev-card-lbl">Project Equity Partner</span><span class="dev-card-val">Mt. K Kapital</span></div>
+        <div class="dev-card"><span class="dev-card-lbl">RERA Completion Date</span><span class="dev-card-val">October 2030</span></div>
+        <div class="dev-card"><span class="dev-card-lbl">Current Construction Stage</span><span class="dev-card-val">Excavation</span></div>
+        <div class="dev-card"><span class="dev-card-lbl">Portfolio Manager</span><span class="dev-card-val">Utsav Chitroda</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════
-     FOOTER
-══════════════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-4">
-        <div class="footer-brand">Cliff Tower</div>
-        <div style="font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--silver-dark);letter-spacing:0.12em;">Mount Mary, Bandra West</div>
-        <div class="footer-rera mt-1">MahaRERA: P51800080156</div>
-        <p style="font-size:0.75rem;color:var(--silver-dark);margin-top:1.2rem;line-height:1.85;">Ultra-luxury residences by Rustomjee atop the iconic Mount Mary hill — a curated address for those who value rare distinction.</p>
+<!-- ══════════════════════════════════
+  8. FINAL CTA SECTION
+══════════════════════════════════ -->
+<section id="cta-final">
+  <div class="wrap" style="position:relative;z-index:2;text-align:center;">
+    <span class="eyebrow" style="display:block;">Begin Your Journey</span>
+    <h2 class="h2" style="font-size:clamp(2.2rem,5vw,4rem);text-align:center;">Mumbai's Most<br><em>Coveted Address</em></h2>
+    <div class="divider cx"></div>
+
+    <div class="cta-price-display">
+      <span class="cta-pd-amount">₹ 38 Cr* Onwards</span>
+      <span class="cta-pd-note">4 &amp; 5 BHK · Mount Mary, Bandra West</span>
+    </div>
+
+    <div class="cta-btns">
+      <a href="#contact" class="btn-f-primary"><i class="bi bi-envelope-fill"></i> Enquire Now</a>
+      <a href="#floorplans" class="btn-f-outline"><i class="bi bi-layout-text-window"></i> View Floor Plans</a>
+    </div>
+
+    <p style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:2.5rem;">MahaRERA · P51800080156 · October 2030 Completion</p>
+  </div>
+</section>
+
+
+<!-- CONTACT FORM -->
+<section id="contact" class="sec" style="background:var(--bg1);">
+  <div class="wrap">
+    <div class="tc reveal" style="margin-bottom:3.5rem;">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="h2">Request a <em>Consultation</em></h2>
+      <div class="divider cx"></div>
+    </div>
+    <div class="contact-grid reveal">
+      <div>
+        <p class="body-text" style="margin-bottom:2rem;">Our Portfolio Managers are available to guide you through the residences, pricing, and customisation options. All enquiries are treated with the utmost discretion.</p>
+        <div class="contact-info-block"><span class="cil">Sales Gallery</span><span class="civ">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West, Mumbai</span></div>
+        <div class="contact-info-block"><span class="cil">Project Address</span><span class="civ">Rustomjee Cliff Tower · Mount Mary Road<br>Bandra West, Mumbai — 400 050</span></div>
+        <div class="contact-info-block"><span class="cil">MahaRERA</span><span class="civ">P51800080156</span></div>
+        <div class="contact-info-block"><span class="cil">Portfolio Manager</span><span class="civ">Utsav Chitroda</span></div>
       </div>
-      <div class="col-lg-2 col-6">
-        <div style="font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Quick Links</div>
-        <a href="#overview" class="footer-link">Overview</a>
+      <div class="contact-form-wrap">
+        <p style="font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;">Quick Enquiry</p>
+        <form id="enquiryForm" novalidate>
+          <div class="fgroup">
+            <label class="flabel" for="cf-name">Full Name *</label>
+            <input class="finput" type="text" id="cf-name" placeholder="Your full name" required/>
+          </div>
+          <div class="fgroup">
+            <label class="flabel" for="cf-mobile">Mobile Number *</label>
+            <input class="finput" type="tel" id="cf-mobile" placeholder="10-digit mobile" maxlength="10" required/>
+          </div>
+          <div class="fgroup">
+            <label class="flabel" for="cf-type">I Want To</label>
+            <select class="finput" id="cf-type">
+              <option value="">— Select —</option>
+              <option value="site-visit">Book a Site Visit</option>
+              <option value="cost-sheet">Get Cost Sheet</option>
+              <option value="4bhk">4 BHK — From ₹38 Cr</option>
+              <option value="5bhk">5 BHK — From ₹61.5 Cr</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-cta">
+            <i class="bi bi-send-fill"></i> Send Enquiry
+          </button>
+          <p class="form-consent" style="margin-top:1rem;">By submitting you agree to our <a href="#">Privacy Policy</a> &amp; consent to being contacted.</p>
+          <div id="cfSuccess" class="success-msg"><i class="bi bi-check-circle" style="margin-right:0.4rem;"></i>Thank you! Our team will reach you within 24 hours.</div>
+          <div id="cfError" class="error-msg"></div>
+        </form>
+        <p style="font-size:0.62rem;color:var(--muted);margin-top:1rem;"><i class="bi bi-lock-fill" style="color:var(--gold);margin-right:0.3rem;"></i>Your information is secure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Cliff Tower</div>
+        <p style="font-size:0.72rem;color:var(--muted);margin-top:1rem;line-height:1.9;">Ultra-luxury residences by Rustomjee atop the iconic Mount Mary hill — a curated address for those who value rare distinction.</p>
+        <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:0.5rem;">MahaRERA: P51800080156</p>
+      </div>
+      <div>
+        <p style="font-size:0.55rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Quick Links</p>
+        <a href="#highlights" class="footer-link">Overview</a>
         <a href="#pricing" class="footer-link">Pricing</a>
         <a href="#floorplans" class="footer-link">Floor Plans</a>
-        <a href="#unitplans" class="footer-link">Unit Plans</a>
         <a href="#amenities" class="footer-link">Amenities</a>
         <a href="#gallery" class="footer-link">Gallery</a>
         <a href="#location" class="footer-link">Location</a>
         <a href="#contact" class="footer-link">Contact</a>
       </div>
-      <div class="col-lg-3 col-6">
-        <div style="font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Project Details</div>
-        <div style="font-size:0.72rem;color:var(--silver-dark);line-height:2.1;">
-          <div>Type: Redevelopment</div>
-          <div>Land: 0.502 Acres</div>
-          <div>Floors: 20 Habitable</div>
-          <div>Units: 2 per Floor</div>
-          <div>Parking: 4 Basements</div>
-          <div>Height: 11.9 Ft. S-to-S</div>
-          <div>Completion: Oct 2030</div>
-        </div>
+      <div>
+        <p style="font-size:0.55rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Project Details</p>
+        <p style="font-size:0.7rem;color:var(--muted);line-height:2.1;">Type: Redevelopment<br>Land: 0.502 Acres<br>Floors: 20 Habitable<br>Units: 2 per Floor<br>Parking: 4 Basements<br>Completion: Oct 2030</p>
       </div>
-      <div class="col-lg-3">
-        <div style="font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Visit Us</div>
-        <div style="font-size:0.78rem;color:var(--silver-dark);line-height:2;">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West<br>Mumbai — 400 050</div>
-        <a href="https://maps.app.goo.gl/3S3t6NNRZThPzmrr5" target="_blank" rel="noopener" class="btn-small mt-3 d-inline-block"><i class="bi bi-map me-1"></i>Get Directions</a>
+      <div>
+        <p style="font-size:0.55rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Visit Us</p>
+        <p style="font-size:0.75rem;color:var(--muted);line-height:1.9;">Rustomjee Crescent Sales Gallery<br>Pali Hill, Bandra West<br>Mumbai — 400 050</p>
+        <a href="https://maps.app.goo.gl/3S3t6NNRZThPzmrr5" target="_blank" rel="noopener" class="loc-btn" style="margin-top:1rem;font-size:0.58rem;display:inline-flex;">
+          <i class="bi bi-map"></i> Directions
+        </a>
       </div>
     </div>
-    <div class="footer-disclaimer">
-      <strong style="color:rgba(140,160,180,0.65);">Disclaimer:</strong> This website does not constitute an offer and/or acceptance and/or contract and/or agreement of any nature whatsoever. The pictorial representations herein are merely creative imagination and indicative only. Actual product may vary. Room dimensions are measured considering unfinished wall surfaces. Minor variations (±3%) may occur. Furniture fixtures depicted are proposed arrangement and not part of the product offering. This is a proposed plan subject to approval from municipal authorities. Before making a purchase decision, verify all details on https://maharera.mahaonline.gov.in · MahaRERA: P51800080156 · Project Equity Partner: Mt. K Kapital.
+    <div class="footer-disc">
+      <strong style="color:rgba(81,96,117,0.65);">Disclaimer:</strong> This website does not constitute an offer and/or acceptance and/or contract of any nature whatsoever. Pictorial representations are creative imagination and indicative only. Actual product may vary. Room dimensions are measured considering unfinished wall surfaces. Minor variations (±3%) may occur. Furniture depicted is proposed arrangement only. This is a proposed plan subject to approval from municipal authorities. Verify all details on https://maharera.mahaonline.gov.in · MahaRERA: P51800080156 · Project Equity Partner: Mt. K Kapital.
     </div>
     <div class="footer-bottom">
-      <!-- <span>This website is for informational purposes only. All images, specifications, amenities and information shown are indicative and subject to change without prior notice. This is not a legal offering document. Please verify all details with the developer's official documentation and RERA filings. RERA registration details to be confirmed.</span> -->
+      <span>© 2025 Rustomjee Cliff Tower</span>
       <span>MahaRERA Reg. No. P51800080156</span>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
-  <i class="bi bi-chevron-up"></i>
+<button id="scrollTop" aria-label="Back to top">
+  <span class="st-label">Top</span>
+  <span class="st-circle"><i class="bi bi-chevron-up"></i></span>
+  <span class="st-line"></span>
 </button>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,235 +1,154 @@
-/* ===================================
-   RUSTOMJEE CLIFF TOWER — SCRIPT v2
-   =================================== */
-'use strict';
 
-/* === NAVBAR SCROLL === */
-const navbar = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 80);
+
+/* ── DRAWER TOGGLE (fully working) ── */
+const toggle=document.getElementById('nav-toggle');
+const drawer=document.getElementById('nav-links');
+const overlay=document.getElementById('drawer-overlay');
+
+function openDrawer(){
+  toggle.classList.add('open');
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  toggle.setAttribute('aria-expanded','true');
+  document.body.style.overflow='hidden';
+}
+function closeDrawer(){
+  toggle.classList.remove('open');
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  toggle.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
+toggle.addEventListener('click',()=>{
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
 });
+overlay.addEventListener('click', closeDrawer);
+document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click', closeDrawer));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
 
-/* === SCROLL REVEAL === */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-/* === SMOOTH SCROLL === */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+/* Smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const t=document.querySelector(this.getAttribute('href'));
+    if(!t)return;
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (!target) return;
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
-    const collapse = document.querySelector('.navbar-collapse');
-    if (collapse?.classList.contains('show')) bootstrap.Collapse.getInstance(collapse)?.hide();
+    window.scrollTo({top:t.getBoundingClientRect().top+scrollY-76,behavior:'smooth'});
   });
 });
 
-/* === AMENITY SLIDER === */
-(function() {
-  const slider = document.querySelector('.amenity-slider');
-  const slides = document.querySelectorAll('.amenity-slide');
-  const dots = document.querySelectorAll('.am-dot');
-  if (!slider || !slides.length) return;
+/* Reveal */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-  let current = 0;
-  let autoTimer;
+/* Active nav */
+const secs=[...document.querySelectorAll('section[id]')];
+window.addEventListener('scroll',()=>{
+  const sp=scrollY+100;
+  secs.forEach(s=>{
+    if(sp>=s.offsetTop&&sp<s.offsetTop+s.offsetHeight){
+      document.querySelectorAll('.nav-links-desktop a, #nav-links .nav-item a').forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll(`.nav-links-desktop a[href="#${s.id}"], #nav-links .nav-item a[href="#${s.id}"]`).forEach(l=>l.classList.add('active'));
+    }
+  });
+},{passive:true});
 
-  function goTo(idx) {
-    current = (idx + slides.length) % slides.length;
-    slider.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+/* Scroll top */
+const stb=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>stb.classList.toggle('show',scrollY>300),{passive:true});
+stb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ══ AMENITIES SLIDER ══ */
+(function(){
+  const slider=document.getElementById('amSlider');
+  const slides=[...slider.querySelectorAll('.am-slide')];
+  const dotsWrap=document.getElementById('amDots');
+  let current=0;
+  let perView=4;
+  let autoTimer=null;
+
+  function getPerView(){
+    if(window.innerWidth<=576)return 1;
+    if(window.innerWidth<=900)return 2;
+    return 4;
   }
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+  const totalGroups=()=>Math.ceil(slides.length/perView);
 
-  document.querySelector('.am-next')?.addEventListener('click', () => { next(); resetAuto(); });
-  document.querySelector('.am-prev')?.addEventListener('click', () => { prev(); resetAuto(); });
-  dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); resetAuto(); }));
+  function buildDots(){
+    dotsWrap.innerHTML='';
+    for(let i=0;i<totalGroups();i++){
+      const d=document.createElement('button');
+      d.className='am-dot'+(i===current?' active':'');
+      d.setAttribute('aria-label',`Group ${i+1}`);
+      d.addEventListener('click',()=>goTo(i));
+      dotsWrap.appendChild(d);
+    }
+  }
 
-  function startAuto() { autoTimer = setInterval(next, 5000); }
-  function resetAuto() { clearInterval(autoTimer); startAuto(); }
+  function goTo(idx){
+    const groups=totalGroups();
+    current=(idx+groups)%groups;
+    const slideW=slides[0].offsetWidth+16;
+    slider.scrollTo({left:current*perView*slideW,behavior:'smooth'});
+    buildDots();
+  }
 
-  // Touch/swipe support
-  let touchStartX = 0;
-  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  slider.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+  function startAuto(){
+    autoTimer=setInterval(()=>goTo(current+1),3500);
+  }
+  function stopAuto(){clearInterval(autoTimer);}
+
+  document.getElementById('amNext').addEventListener('click',()=>{stopAuto();goTo(current+1);startAuto();});
+  document.getElementById('amPrev').addEventListener('click',()=>{stopAuto();goTo(current-1);startAuto();});
+
+  window.addEventListener('resize',()=>{
+    perView=getPerView();
+    current=0;
+    buildDots();
+    slider.scrollTo({left:0,behavior:'auto'});
   });
 
-  goTo(0);
+  perView=getPerView();
+  buildDots();
   startAuto();
 })();
 
-/* === OVERVIEW SLIDER === */
-(function() {
-  const track = document.querySelector('.overview-slider');
-  const slides = document.querySelectorAll('.overview-slide');
-  const dots = document.querySelectorAll('.ov-dot');
-  const btnNext = document.querySelector('.ov-next');
-  const btnPrev = document.querySelector('.ov-prev');
-  if (!track || !slides.length) return;
+/* Phone validation */
+function validPhone(p){return/^[6-9]\d{9}$/.test(p.replace(/\D/g,''));}
 
-  let current = 0;
-  let auto;
-
-  function goTo(i) {
-    current = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
-  }
-
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  btnNext?.addEventListener('click', () => { next(); reset(); });
-  btnPrev?.addEventListener('click', () => { prev(); reset(); });
-  dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); reset(); }));
-
-  function start() { auto = setInterval(next, 6000); }
-  function reset() { clearInterval(auto); start(); }
-
-  // touch support
-  let tx = 0;
-  track.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend', (e) => {
-    const diff = tx - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
-    reset();
-  });
-
-  goTo(0);
-  start();
-})();
-
-/* === UNIT PLAN TABS === */
-document.querySelectorAll('.unit-tab-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.unit-tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.unit-tab-pane').forEach(p => p.classList.remove('active'));
-    this.classList.add('active');
-    const target = document.getElementById(this.dataset.tab);
-    if (target) target.classList.add('active');
-  });
+/* Hero form */
+const hf=document.getElementById('heroForm');
+hf.addEventListener('submit',function(e){
+  e.preventDefault();
+  const n=this.querySelector('[name="name"]').value.trim();
+  const p=this.querySelector('[name="phone"]').value.trim();
+  const pr=this.querySelector('[name="preference"]').value;
+  if(!n||n.length<2){alert('Please enter your full name.');return;}
+  if(!validPhone(p)){alert('Please enter a valid 10-digit Indian mobile number.');return;}
+  if(!pr){alert('Please select a preference.');return;}
+  const btn=this.querySelector('.btn-cta');
+  btn.innerHTML='<i class="bi bi-hourglass-split"></i> Sending…';btn.disabled=true;
+  setTimeout(()=>{this.reset();document.getElementById('heroSuccess').style.display='block';btn.innerHTML='<i class="bi bi-file-earmark-text"></i> Get Cost Sheet';btn.disabled=false;},1200);
 });
 
-/* === FORM VALIDATION === */
-const form = document.getElementById('enquiryForm');
-if (form) {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const success = document.getElementById('formSuccess');
-    const error = document.getElementById('formError');
-    success.classList.remove('show');
-    error.classList.remove('show');
-
-    const name   = document.getElementById('name').value.trim();
-    const mobile = document.getElementById('mobile').value.trim().replace(/\D/g, '');
-
-    const err = (msg) => { error.textContent = msg; error.classList.add('show'); };
-
-    if (!name || name.length < 2)           return err('Please enter your full name.');
-    if (!/^[6-9]\d{9}$/.test(mobile))       return err('Please enter a valid 10-digit mobile number.');
-
-    const btn = form.querySelector('.btn-submit-luxury');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      success.classList.add('show');
-      form.reset();
-      btn.textContent = 'Send Enquiry';
-      btn.disabled = false;
-    }, 1400);
-  });
-}
-
-/* === UNIT REQUEST → scroll to form === */
-document.querySelectorAll('.btn-unit-request').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const typeText = this.closest('.unit-tab-pane')?.id || '';
-    const sel = document.getElementById('resType');
-    if (sel) {
-      if (typeText.includes('4bhk'))  sel.value = '4bhk';
-      else if (typeText.includes('5bhk')) sel.value = '5bhk';
-    }
-    const contact = document.getElementById('contact');
-    if (contact) window.scrollTo({ top: contact.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
-  });
+document.getElementById('hf-pref').addEventListener('change',function(){
+  const btn=document.getElementById('heroBtn');
+  btn.innerHTML=this.value==='site-visit'
+    ?'<i class="bi bi-calendar-check"></i> Book Site Visit →'
+    :'<i class="bi bi-file-earmark-text"></i> Get Cost Sheet';
 });
 
-/* === ACTIVE NAV ON SCROLL === */
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  const sp = window.pageYOffset + 120;
-  sections.forEach(s => {
-    if (sp >= s.offsetTop && sp < s.offsetTop + s.offsetHeight) {
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      document.querySelector(`.nav-link[href="#${s.id}"]`)?.classList.add('active');
-    }
-  });
-}, { passive: true });
-
-/* === HERO PARALLAX (subtle) === */
-window.addEventListener('scroll', () => {
-  const y = window.pageYOffset;
-  if (y < window.innerHeight) {
-    document.querySelectorAll('.slide-bg').forEach(b => {
-      b.style.transform = `scale(1.18) translateY(${y * 0.12}px)`;
-    });
-    const active = document.querySelector('.carousel-item.active .slide-bg');
-    if (active) active.style.transform = `scale(1) translateY(${y * 0.12}px)`;
-  }
-}, { passive: true });
-
-/* === SCROLL TO TOP BUTTON === */
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-if (scrollToTopBtn) {
-  window.addEventListener('scroll', () => {
-    scrollToTopBtn.classList.toggle('visible', window.scrollY > 300);
-  }, { passive: true });
-
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-/* === HERO CTA FORM SUBMISSION === */
-const heroCTAForm = document.getElementById('heroCTAForm');
-if (heroCTAForm) {
-  heroCTAForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = this.querySelector('input[name="name"]').value.trim();
-    const phone = this.querySelector('input[name="phone"]').value.trim();
-    const preference = this.querySelector('select[name="preference"]').value;
-    
-    if (!name || name.length < 2) {
-      alert('Please enter your full name.');
-      return;
-    }
-    if (!/^[6-9]\d{9}$/.test(phone.replace(/\D/g, ''))) {
-      alert('Please enter a valid 10-digit phone number.');
-      return;
-    }
-    if (!preference) {
-      alert('Please select a preference.');
-      return;
-    }
-    
-    // Show success message
-    const btn = this.querySelector('.btn-cta-primary');
-    const originalText = btn.textContent;
-    btn.textContent = 'Request Sent! 🎉';
-    btn.disabled = true;
-    
-    setTimeout(() => {
-      this.reset();
-      btn.textContent = originalText;
-      btn.disabled = false;
-    }, 2000);
-  });
-}
+/* Contact form */
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const s=document.getElementById('cfSuccess');const er=document.getElementById('cfError');
+  s.style.display='none';er.style.display='none';
+  const n=document.getElementById('cf-name').value.trim();
+  const m=document.getElementById('cf-mobile').value.trim();
+  const err=msg=>{er.textContent=msg;er.style.display='block';};
+  if(!n||n.length<2)return err('Please enter your full name.');
+  if(!validPhone(m))return err('Please enter a valid 10-digit mobile number.');
+  const btn=this.querySelector('.btn-cta');btn.innerHTML='<i class="bi bi-hourglass-split"></i> Sending…';btn.disabled=true;
+  setTimeout(()=>{s.style.display='block';this.reset();btn.innerHTML='<i class="bi bi-send-fill"></i> Send Enquiry';btn.disabled=false;},1400);
+});
